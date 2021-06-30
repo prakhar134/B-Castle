@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navbar/Navbar";
 import Ourteam from "../../Components/Ourteam/Ourteam";
 import About from "../About/about";
@@ -78,6 +79,7 @@ const home = () => {
         </div>
       </div>
       <News />
+      <Footer />
     </React.Fragment>
   );
 };

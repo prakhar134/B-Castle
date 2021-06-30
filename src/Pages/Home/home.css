@@ -35,6 +35,7 @@
   font-size: 0.8rem;
   width: 200px;
   outline: none;
+  color: white;
 }
 
 .header__getStarted__content > button {
@@ -43,6 +44,7 @@
   border: none;
   width: 120px;
   margin: 0 20px;
+
   background-image: linear-gradient(
     90deg,
     rgba(20, 0, 36, 1) 0%,
@@ -75,7 +77,6 @@
   display: flex;
   justify-content: space-around;
   padding: 3rem;
-  margin-top: 3rem;
 }
 
 .getstarted__cards__card {
@@ -122,7 +123,6 @@
   outline: none;
   border: none;
   opacity: 0.4;
-  color: white;
   border-radius: 30px 0 0 30px;
   width: 200px;
 }
