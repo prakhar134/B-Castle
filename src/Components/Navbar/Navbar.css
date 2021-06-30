@@ -11,6 +11,7 @@
   margin: 0;
   padding: 0;
   align-items: center;
+  color: white;
 }
 
 .nav__bar__options > button {
@@ -19,10 +20,15 @@
   border: none;
   margin-right: 50px;
   margin-left: 50px;
+  background-color: #5ab5d400;
+  color: white;
+  border: 1px solid white;
 }
 
 .nav__bar__options > button:hover {
   cursor: pointer;
+  background-color: white;
+  color: rgb(82, 82, 82);
 }
 
 .nav__bar__option {

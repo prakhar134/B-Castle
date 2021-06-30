@@ -1,15 +1,22 @@
 .Header {
   height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .header__getStarted {
   height: 88vh;
-  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
+.header__svg {
+  position: absolute;
+  z-index: -1;
+  right: -35rem;
+  height: 55rem;
+  top: 0rem;
+}
 .header__getStarted__content {
   margin-left: 20%;
 }
@@ -77,7 +84,22 @@
   font-weight: 400;
   color: #35358a;
 }
-
+.getstarted__arrow_card {
+  position: relative;
+  z-index: -1;
+}
+.getstarted__arrow {
+  position: absolute;
+  top: -11rem;
+  height: 25rem;
+  left: 5em;
+}
+.getstarted__arrow_2 {
+  position: absolute;
+  top: -11rem;
+  height: 25rem;
+  left: 12em;
+}
 .getstarted__cards {
   display: flex;
   justify-content: space-around;
@@ -86,13 +108,13 @@
 
 .getstarted__cards__card {
   padding: 3rem;
-  /* box-shadow: 1px 0px 26px -9px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 0px 26px -9px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 0px 26px -9px rgba(0, 0, 0, 0.75); */
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: 1px 0px 30px rgba(216, 216, 216, 0.884);
+  -webkit-box-shadow: 1px 0px 30px rgba(216, 216, 216, 0.75);
+  -moz-box-shadow: 1px 0px 30px rgba(216, 216, 216, 0.884);
   max-width: 300px;
   margin: 0 2rem;
 }
+
 .getstarted__cards__card > h1 {
   font-size: 1.3rem;
   font-weight: 400;
@@ -104,6 +126,9 @@
   padding: 2rem 4rem;
   justify-content: space-evenly;
   align-items: center;
+  overflow: hidden;
+  position: relative;
+
   /* background: linear-gradient(
     90deg,
     rgba(20, 0, 36, 1) 0%,
@@ -119,7 +144,39 @@
   color: white;
   margin-top: 3rem;
 }
-
+.newsLetter:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 300px;
+  height: 100%;
+  background: rgba(230, 10, 10, 0.3);
+  transform: skewX(-30deg);
+  animation-name: slide;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.034) 0%,
+    rgba(255, 255, 255, 0.014) 0%,
+    rgba(255, 255, 255, 0.014) 0%,
+    rgba(255, 255, 255, 0.014) 0%
+  );
+}
+@keyframes slide {
+  0% {
+    left: -400px;
+    top: 0;
+  }
+  100% {
+    left: 1500px;
+    top: 0;
+  }
+}
 .newsLetter__content > h2 {
   font-weight: 300;
   font-size: 1.8rem;
