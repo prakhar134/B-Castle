@@ -1,0 +1,34 @@
+.About {
+  padding: 2rem;
+  display: flex;
+}
+
+.about__image {
+  max-width: 50%;
+  padding: 2rem;
+}
+
+.about__content {
+  max-width: 50%;
+  padding: 2rem;
+}
+
+.about__content__heaing {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #35358a;
+}
+
+.about__content__description {
+  max-width: 80%;
+  color: #8c8c8c;
+}
+
+.about__content__btn {
+  border: 1px solid lightgray;
+  width: fit-content;
+  padding: 10px 30px;
+  border-radius: 30px;
+  border-color: #35358a;
+  margin-top: 3rem;
+}
