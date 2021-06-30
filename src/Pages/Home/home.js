@@ -16,7 +16,7 @@ const home = () => {
         <Navbar />
 
         <div className="header__getStarted">
-          <img src={map} className="header__svg" />
+          <img src={map} className="header__svg" alt="" />
           <div className="header__getStarted__content">
             <h1>
               Invest in <span>Bitcoin</span>
@@ -39,7 +39,7 @@ const home = () => {
         </p>
         <div className="getstarted__cards">
           <div className="getstarted__arrow_card">
-            <img src={arrow} className="getstarted__arrow" />
+            <img src={arrow} className="getstarted__arrow" alt=""/>
             <div className="getstarted__cards__card">
               <div>image</div>
               <h1>Create Your Wallet</h1>
@@ -51,7 +51,7 @@ const home = () => {
             </div>
           </div>
           <div className="getstarted__arrow_card">
-            <img src={arrow} className="getstarted__arrow_2" />
+            <img src={arrow} className="getstarted__arrow_2" alt=""/>
             <div className="getstarted__cards__card">
               <div>image</div>
               <h1>Create Your Wallet</h1>
