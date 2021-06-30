@@ -31,14 +31,17 @@
 }
 .ourTeam__cards__card {
   border-radius: 5px;
-  box-shadow: 1px 0px 26px -8px rgba(0, 0, 0, 0.91);
-  -webkit-box-shadow: 1px 0px 26px -8px rgba(0, 0, 0, 0.91);
-  -moz-box-shadow: 1px 0px 26px -8px rgba(0, 0, 0, 0.91);
-  padding: 2rem;
+  box-shadow: 1px 0px 30px rgba(216, 216, 216, 0.884);
+  -webkit-box-shadow: 1px 0px 30px rgba(216, 216, 216, 0.884);
+  -moz-box-shadow: 1px 0px 30px rgba(216, 216, 216, 0.884);
+  padding: 3.6rem;
 }
 
 .teamMember__socialMedia {
   font-size: xx-large;
   display: flex;
   justify-content: space-evenly;
+}
+.teamMember__socialMedia_icon {
+  margin: 2px;
 }

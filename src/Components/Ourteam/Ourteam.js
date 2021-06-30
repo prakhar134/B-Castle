@@ -1,6 +1,6 @@
-import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
-import "./Ourteam.css";
+import React from 'react';
+import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import './Ourteam.css';
 
 const Ourteam = () => {
   return (
@@ -66,9 +66,9 @@ const Ourteam = () => {
           <p className="teamMember__name">Katy Abrahams</p>
           <p className="teamMember__post">Head of Design</p>
           <div classroom="teamMember__socialMedia">
-            <FaFacebook />
-            <FaTwitter />
-            <FaLinkedin />
+            <FaFacebook classroom="teamMember__socialMedia_icon" />
+            <FaTwitter  classroom="teamMember__socialMedia_icon"/>
+            <FaLinkedin  classroom="teamMember__socialMedia_icon"/>
           </div>
         </div>
       </div>

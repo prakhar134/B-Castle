@@ -1,16 +1,20 @@
-import React from "react";
-import Navbar from "../../Components/Navbar/Navbar";
-import Ourteam from "../../Components/Ourteam/Ourteam";
-import About from "../About/about";
-import Features from "../Features/features";
-import "./home.css";
+import React from 'react';
+import Navbar from '../../Components/Navbar/Navbar';
+import Ourteam from '../../Components/Ourteam/Ourteam';
+import About from '../About/about';
+import Features from '../Features/features';
+import map from '../../static/icons/map.svg';
+import arrow from '../../static/icons/arrow.svg';
+import './home.css';
 
 const home = () => {
   return (
     <React.Fragment>
       <div className="Header">
         <Navbar />
+
         <div className="header__getStarted">
+          <img src={map} className="header__svg" />
           <div className="header__getStarted__content">
             <h1>
               Invest in <span>Bitcoin</span>
@@ -32,23 +36,29 @@ const home = () => {
           easy and takes only a few minutes!
         </p>
         <div className="getstarted__cards">
-          <div className="getstarted__cards__card">
-            <div>image</div>
-            <h1>Create Your Wallet</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            </p>
+          <div className="getstarted__arrow_card">
+            <img src={arrow} className="getstarted__arrow" />
+            <div className="getstarted__cards__card">
+              <div>image</div>
+              <h1>Create Your Wallet</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              </p>
+            </div>
           </div>
-          <div className="getstarted__cards__card">
-            <div>image</div>
-            <h1>Create Your Wallet</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            </p>
+          <div className="getstarted__arrow_card">
+            <img src={arrow} className="getstarted__arrow_2" />
+            <div className="getstarted__cards__card">
+              <div>image</div>
+              <h1>Create Your Wallet</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              </p>
+            </div>
           </div>
           <div className="getstarted__cards__card">
             <div>image</div>

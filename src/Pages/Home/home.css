@@ -1,15 +1,22 @@
 .Header {
   height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .header__getStarted {
   height: 88vh;
-  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
+.header__svg {
+  position: absolute;
+  z-index: -1;
+  right: -35rem;
+  height: 63rem;
+  top: -13rem;
+}
 .header__getStarted__content {
   margin-left: 20%;
 }
@@ -70,7 +77,22 @@
   font-weight: 400;
   color: #35358a;
 }
-
+.getstarted__arrow_card {
+  position: relative;
+  z-index: -1;
+}
+.getstarted__arrow {
+  position: absolute;
+  top: -11rem;
+  height: 25rem;
+  left: 5em;
+}
+.getstarted__arrow_2 {
+  position: absolute;
+  top: -11rem;
+  height: 25rem;
+  left: 12em;
+}
 .getstarted__cards {
   display: flex;
   justify-content: space-around;
@@ -80,11 +102,12 @@
 
 .getstarted__cards__card {
   padding: 3rem;
-  box-shadow: 1px 0px 26px -9px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 0px 26px -9px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 0px 26px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 0px 30px rgba(216, 216, 216, 0.884);
+  -webkit-box-shadow: 1px 0px 30px rgba(216, 216, 216, 0.75);
+  -moz-box-shadow: 1px 0px 30px rgba(216, 216, 216, 0.884);
   max-width: 300px;
 }
+
 .getstarted__cards__card > h1 {
   font-size: 1.3rem;
   font-weight: 400;
