@@ -84,6 +84,7 @@
   -webkit-box-shadow: 1px 0px 26px -9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 0px 26px -9px rgba(0, 0, 0, 0.75);
   max-width: 300px;
+  margin: 0 2rem;
 }
 .getstarted__cards__card > h1 {
   font-size: 1.3rem;
@@ -131,8 +132,7 @@
   color: white;
 }
 
-.newsLetter__input > button,
-button:hover {
+.newsLetter__input > button {
   padding: 10px;
   border: none;
   outline: none;
