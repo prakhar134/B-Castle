@@ -36,3 +36,7 @@
   border-color: #35358a;
   margin-top: 3rem;
 }
+
+.about__content__btn:hover {
+  cursor: pointer;
+}
