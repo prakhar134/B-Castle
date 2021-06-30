@@ -35,7 +35,9 @@ const home = () => {
         </p>
         <div className="getstarted__cards">
           <div className="getstarted__cards__card">
-            <div>image</div>
+            <div>
+              <img src="https://via.placeholder.com/50" alt="" />
+            </div>
             <h1>Create Your Wallet</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -44,7 +46,9 @@ const home = () => {
             </p>
           </div>
           <div className="getstarted__cards__card">
-            <div>image</div>
+            <div>
+              <img src="https://via.placeholder.com/50" alt="" />
+            </div>
             <h1>Create Your Wallet</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -53,7 +57,9 @@ const home = () => {
             </p>
           </div>
           <div className="getstarted__cards__card">
-            <div>image</div>
+            <div>
+              <img src="https://via.placeholder.com/50" alt="" />
+            </div>
             <h1>Create Your Wallet</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
