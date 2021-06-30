@@ -10,7 +10,7 @@ const News = () => {
       <div className="news__cards">
         <div className="news__cards__card">
           <div className="news__card__image">
-            <img src="https://via.placeholder.com/400" />
+            <img src="https://via.placeholder.com/400" alt="" />
           </div>
           <div className="news__card__content">
             <span>03 JAN 2018</span>
@@ -28,7 +28,7 @@ const News = () => {
         </div>
         <div className="news__cards__card">
           <div className="news__card__image">
-            <img src="https://via.placeholder.com/400" />
+            <img src="https://via.placeholder.com/400" alt="" />
           </div>
           <div className="news__card__content">
             <span>03 JAN 2018</span>
@@ -46,7 +46,7 @@ const News = () => {
         </div>
         <div className="news__cards__card">
           <div className="news__card__image">
-            <img src="https://via.placeholder.com/400" />
+            <img src="https://via.placeholder.com/400" alt="" />
           </div>
           <div className="news__card__content">
             <span>03 JAN 2018</span>
