@@ -8,6 +8,10 @@
   padding: 2rem;
 }
 
+.about__image > img {
+  width: 100%;
+}
+
 .about__content {
   max-width: 50%;
   padding: 2rem;

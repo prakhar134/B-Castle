@@ -3,6 +3,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import Ourteam from "../../Components/Ourteam/Ourteam";
 import About from "../About/about";
 import Features from "../Features/features";
+import News from "../News/News";
 import "./home.css";
 
 const home = () => {
@@ -62,6 +63,21 @@ const home = () => {
         </div>
       </div>
       <Ourteam />
+      {/* Subscribe to our newsletter */}
+      <div className="newsLetter">
+        <div className="newsLetter__content">
+          <h2>Subsrcibe to our Newsletter</h2>
+          <p>
+            Sign up for weekly industry updates, insider perspectives and
+            in-depth market analysis.
+          </p>
+        </div>
+        <div className="newsLetter__input">
+          <input type="email" placeholder="Enter your Email" />
+          <button>Get Started</button>
+        </div>
+      </div>
+      <News />
     </React.Fragment>
   );
 };
