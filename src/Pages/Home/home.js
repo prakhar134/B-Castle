@@ -1,22 +1,13 @@
-<<<<<<< HEAD
 import React from 'react';
+import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import Ourteam from '../../Components/Ourteam/Ourteam';
 import About from '../About/about';
 import Features from '../Features/features';
+import News from '../News/News';
 import map from '../../static/icons/map.svg';
 import arrow from '../../static/icons/arrow.svg';
 import './home.css';
-=======
-import React from "react";
-import Footer from "../../Components/Footer/Footer";
-import Navbar from "../../Components/Navbar/Navbar";
-import Ourteam from "../../Components/Ourteam/Ourteam";
-import About from "../About/about";
-import Features from "../Features/features";
-import News from "../News/News";
-import "./home.css";
->>>>>>> master
 
 const home = () => {
   return (
