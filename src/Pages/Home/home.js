@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import Ourteam from '../../Components/Ourteam/Ourteam';
@@ -6,6 +7,16 @@ import Features from '../Features/features';
 import map from '../../static/icons/map.svg';
 import arrow from '../../static/icons/arrow.svg';
 import './home.css';
+=======
+import React from "react";
+import Footer from "../../Components/Footer/Footer";
+import Navbar from "../../Components/Navbar/Navbar";
+import Ourteam from "../../Components/Ourteam/Ourteam";
+import About from "../About/about";
+import Features from "../Features/features";
+import News from "../News/News";
+import "./home.css";
+>>>>>>> master
 
 const home = () => {
   return (
@@ -61,7 +72,9 @@ const home = () => {
             </div>
           </div>
           <div className="getstarted__cards__card">
-            <div>image</div>
+            <div>
+              <img src="https://via.placeholder.com/50" alt="" />
+            </div>
             <h1>Create Your Wallet</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -72,6 +85,22 @@ const home = () => {
         </div>
       </div>
       <Ourteam />
+      {/* Subscribe to our newsletter */}
+      <div className="newsLetter">
+        <div className="newsLetter__content">
+          <h2>Subsrcibe to our Newsletter</h2>
+          <p>
+            Sign up for weekly industry updates, insider perspectives and
+            in-depth market analysis.
+          </p>
+        </div>
+        <div className="newsLetter__input">
+          <input type="email" placeholder="Enter your Email" />
+          <button>Get Started</button>
+        </div>
+      </div>
+      <News />
+      <Footer />
     </React.Fragment>
   );
 };

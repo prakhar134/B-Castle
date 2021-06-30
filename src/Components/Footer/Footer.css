@@ -1,0 +1,59 @@
+.footer {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer__logo {
+  max-width: 300px;
+}
+
+.footer__logo > p {
+  color: #8c8c8c;
+}
+
+.footer__resources > p {
+  color: #35358a;
+  margin-bottom: 2rem;
+}
+
+.footer__resources__list > p {
+  color: #8c8c8c;
+  margin-bottom: 0;
+}
+
+.footer__quickLinks > p {
+  color: #35358a;
+  margin-bottom: 2rem;
+}
+
+.footer__quickLinks__list > p {
+  color: #8c8c8c;
+  margin-bottom: 0;
+}
+
+.footer__followUs > p {
+  color: #35358a;
+  margin-bottom: 2rem;
+}
+
+.footer__followUs__icons {
+  font-size: 2rem;
+}
+
+.footer__followUs__icons > svg {
+  margin-right: 1rem;
+}
+
+.facebookIcon {
+  color: #4343af;
+}
+.googlePlusIcon {
+  color: #db4a39;
+}
+.instagramIcon {
+  color: brown;
+}
+.twitterIcon {
+  color: #45c3ec;
+}

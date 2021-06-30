@@ -10,6 +10,11 @@
   margin-top: 0;
 }
 
+.ourTeam > p {
+  margin-bottom: 3rem;
+  color: #8c8c8c;
+}
+
 .teamMember__name {
   font-size: 1.3rem;
   font-weight: 400;
