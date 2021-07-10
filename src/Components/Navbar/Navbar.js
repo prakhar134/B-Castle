@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Signin, Signup as Register } from '../../actions/auth';
 import { connect } from 'react-redux';
 
@@ -11,8 +11,6 @@ const Navbar = (props) => {
   const [openLoginModal, setLoginModal] = useState(false);
   const [openRegistrationModal, setRegistrationModal] = useState(false);
   const authenticated = useSelector((state) => state?.isAuthenticated);
-  const dispatch = useDispatch();
-
   const handleLoginClose = () => {
     setLoginModal(false);
   };

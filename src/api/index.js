@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export const url = `https://bcastle.herokuapp.com/api`;
 export const tokenConfig = (getState) => {
   const token = getState().auth.accessToken;
