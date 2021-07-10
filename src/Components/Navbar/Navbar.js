@@ -1,12 +1,17 @@
-import React, { useState } from "react";
-import { Modal } from "@material-ui/core";
-import CloseIcon from "@material-ui/icons/Close";
+import React, { useState, useEffect } from 'react';
+import { Modal } from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
+import { useSelector, useDispatch } from 'react-redux';
+import { Signin, Signup as Register } from '../../actions/auth';
+import { connect } from 'react-redux';
 
-import "./Navbar.css";
+import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [openLoginModal, setLoginModal] = useState(false);
   const [openRegistrationModal, setRegistrationModal] = useState(false);
+  const authenticated = useSelector((state) => state?.isAuthenticated);
+  const dispatch = useDispatch();
 
   const handleLoginClose = () => {
     setLoginModal(false);
@@ -14,7 +19,35 @@ const Navbar = () => {
   const handleRegistrationClose = () => {
     setRegistrationModal(false);
   };
-
+  const [Login, setLogin] = useState({
+    email: '',
+    password: '',
+  });
+  const [Signup, setSignup] = useState({
+    email: '',
+    password: '',
+    confirmPassword: '',
+    firstName: '',
+    lastName: '',
+    isAdmin: false,
+  });
+  const log = async (e) => {
+    e.preventDefault();
+    const data = await props.Signin(Login);
+    if (data !== null) {
+      window.location.href = '/dashboard';
+    }
+  };
+  const register = async (e) => {
+    e.preventDefault();
+    const data = await props.Register(Signup);
+    if (data !== null) {
+      window.location.href = '/dashboard';
+    }
+  };
+  useEffect(() => {
+    handleRegistrationClose();
+  }, [authenticated]);
   return (
     <>
       <React.Fragment>
@@ -29,12 +62,28 @@ const Navbar = () => {
               <h1>Logo</h1>
             </div>
             <form className="modal__form">
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
-              <button className="login__btn">LOGIN</button>
+              <input
+                type="email"
+                placeholder="Email"
+                onChange={(e) => {
+                  Login.email = e.target.value;
+                  setLogin(Login);
+                }}
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={(e) => {
+                  Login.password = e.target.value;
+                  setLogin(Login);
+                }}
+              />
+              <button className="login__btn" onClick={log}>
+                LOGIN
+              </button>
             </form>
             <p>
-              Looking to{" "}
+              Looking to{' '}
               <span
                 onClick={() => [setRegistrationModal(true), handleLoginClose()]}
               >
@@ -55,15 +104,52 @@ const Navbar = () => {
               <h1>Logo</h1>
             </div>
             <form className="modal__form">
-              <input type="text" placeholder="First Name" />
-              <input type="text" placeholder="Last Name" />
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
-              <input type="password" placeholder="Re-type Password" />
-              <button className="login__btn">REGISTER</button>
+              <input
+                type="text"
+                placeholder="First Name"
+                onChange={(e) => {
+                  Signup.firstName = e.target.value;
+                  setSignup(Signup);
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                onChange={(e) => {
+                  Signup.lastName = e.target.value;
+                  setSignup(Signup);
+                }}
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                onChange={(e) => {
+                  Signup.password = e.target.value;
+                  setSignup(Signup);
+                }}
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={(e) => {
+                  Signup.password = e.target.value;
+                  setSignup(Signup);
+                }}
+              />
+              <input
+                type="password"
+                placeholder="Re-type Password"
+                onChange={(e) => {
+                  Login.confirmPassword = e.target.value;
+                  setLogin(Login);
+                }}
+              />
+              <button className="login__btn" onClick={register}>
+                REGISTER
+              </button>
             </form>
             <p>
-              Already have an{" "}
+              Already have an{' '}
               <span
                 onClick={() => [setLoginModal(true), handleRegistrationClose()]}
               >
@@ -77,19 +163,33 @@ const Navbar = () => {
       <div className="nav__bar">
         <div>Icon</div>
         <ul className="nav__bar__options">
-          <li className="nav__bar__option">Solution</li>
-          <li className="nav__bar__option">Features</li>
-          <li className="nav__bar__option">News</li>
-          <a href="#about">
+          <a href="#solution" className="link__style">
+            <li className="nav__bar__option">Solution</li>
+          </a>
+          <a href="#features" className="link__style">
+            <li className="nav__bar__option">Features</li>
+          </a>
+          <a href="#news" className="link__style">
+            <li className="nav__bar__option">News</li>
+          </a>
+          <a href="#about" className="link__style">
             <li className="nav__bar__option">About</li>
           </a>
 
-          <li className="nav__bar__option">Contact</li>
-          <button onClick={() => setLoginModal(true)}>Sign Up/ Sign In</button>
+          <a href="#contact" className="link__style">
+            <li className="nav__bar__option">Contact</li>
+          </a>
+          {authenticated ? (
+            <button>Logout</button>
+          ) : (
+            <button onClick={() => setLoginModal(true)}>
+              Sign Up/ Sign In
+            </button>
+          )}
         </ul>
       </div>
     </>
   );
 };
 
-export default Navbar;
+export default connect(null, { Signin, Register })(Navbar);

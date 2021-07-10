@@ -1,13 +1,13 @@
-import React from "react";
-import "./features.css";
-import { IoWalletOutline } from "react-icons/io5";
-import { VscDeviceMobile } from "react-icons/vsc";
-import { BiSupport } from "react-icons/bi";
-import { RiExchangeDollarFill } from "react-icons/ri";
+import React from 'react';
+import './features.css';
+import { IoWalletOutline } from 'react-icons/io5';
+import { VscDeviceMobile } from 'react-icons/vsc';
+import { BiSupport } from 'react-icons/bi';
+import { RiExchangeDollarFill } from 'react-icons/ri';
 
 const Features = () => {
   return (
-    <div className="features">
+    <div className="features" id="features">
       <div className="features__heading">
         <h1>Our Features</h1>
         <p>Bitcoin is the simplest way to exchange money at very low cost.</p>
@@ -19,7 +19,7 @@ const Features = () => {
           </div>
           <div className="features__content__description">
             <p>Mobile Apps</p>
-            <p>
+            <p >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
