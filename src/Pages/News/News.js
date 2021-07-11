@@ -10,7 +10,7 @@ const News = () => {
       <div className="news__cards">
         <div className="news__cards__card">
           <div className="news__card__image">
-            <img src="https://via.placeholder.com/400" alt="" />
+            <img src="https://images.unsplash.com/photo-1605792657660-596af9009e82?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Yml0Y29pbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="" />
           </div>
           <div className="news__card__content">
             <span>03 JAN 2018</span>
@@ -28,7 +28,7 @@ const News = () => {
         </div>
         <div className="news__cards__card">
           <div className="news__card__image">
-            <img src="https://via.placeholder.com/400" alt="" />
+            <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW9uZXl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="" />
           </div>
           <div className="news__card__content">
             <span>03 JAN 2018</span>
@@ -46,7 +46,7 @@ const News = () => {
         </div>
         <div className="news__cards__card">
           <div className="news__card__image">
-            <img src="https://via.placeholder.com/400" alt="" />
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmV3c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="" />
           </div>
           <div className="news__card__content">
             <span>03 JAN 2018</span>

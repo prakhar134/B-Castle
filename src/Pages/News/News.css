@@ -1,6 +1,7 @@
 .news {
   padding: 2rem;
   text-align: center;
+  background-color: aliceblue;
 }
 
 .news__heading {
@@ -23,7 +24,7 @@
   max-width: 300px;
   text-align: left;
   margin: 0 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .news__card__image > img {

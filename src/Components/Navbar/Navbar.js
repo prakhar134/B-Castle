@@ -76,6 +76,7 @@ const Navbar = (props) => {
                   setLogin(Login);
                 }}
               />
+              <br />
               <button className="login__btn" onClick={log}>
                 LOGIN
               </button>
@@ -142,6 +143,7 @@ const Navbar = (props) => {
                   setLogin(Login);
                 }}
               />
+              <br />
               <button className="login__btn" onClick={register}>
                 REGISTER
               </button>
@@ -161,21 +163,17 @@ const Navbar = (props) => {
       <div className="nav__bar">
         <div>Icon</div>
         <ul className="nav__bar__options">
-          <a href="#solution" className="link__style">
-            <li className="nav__bar__option">Solution</li>
+          <a href="#about" className="link__style">
+            <li className="nav__bar__option">About</li>
           </a>
           <a href="#features" className="link__style">
             <li className="nav__bar__option">Features</li>
           </a>
-          <a href="#news" className="link__style">
-            <li className="nav__bar__option">News</li>
-          </a>
-          <a href="#about" className="link__style">
-            <li className="nav__bar__option">About</li>
-          </a>
-
           <a href="#contact" className="link__style">
             <li className="nav__bar__option">Contact</li>
+          </a>
+          <a href="#news" className="link__style">
+            <li className="nav__bar__option">News</li>
           </a>
           {authenticated ? (
             <button>Logout</button>

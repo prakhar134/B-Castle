@@ -2,6 +2,8 @@
   height: 100vh;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+  background-color: aliceblue;
 }
 
 .header__getStarted {
@@ -13,9 +15,11 @@
 .header__svg {
   position: absolute;
   z-index: -1;
-  right: -35rem;
+  right: -25rem;
   height: 55rem;
   top: 0rem;
+  transform: rotate(10deg);
+  transform: scale(1.2);
 }
 .header__getStarted__content {
   margin-left: 20%;
@@ -36,21 +40,22 @@
 }
 
 .header__getStarted__content > input {
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 20px;
   border: 1px solid lightgray;
-  font-size: 0.8rem;
+  font-size: 1rem;
   width: 200px;
   outline: none;
   color: black;
 }
 
 .header__getStarted__content > button {
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 20px;
   border: none;
-  width: 120px;
-  margin: 0 20px;
+  width: 130px;
+  font-size: 1rem;
+  margin: 0 10px;
   background: rgb(79, 72, 207);
   background: linear-gradient(
     90deg,
@@ -124,7 +129,7 @@
 
 .newsLetter {
   display: flex;
-  padding: 2rem 4rem;
+  padding: 4rem;
   justify-content: space-evenly;
   align-items: center;
   overflow: hidden;
@@ -181,20 +186,30 @@
 .newsLetter__content > h2 {
   font-weight: 300;
   font-size: 1.8rem;
+  margin-left: 100px;
   margin-bottom: 0;
 }
 
 .newsLetter__content > p {
+  max-width: 420px;
   font-size: 0.8rem;
+  margin-left: 100px;
 }
-
+.newsLetter__input{
+  width: 50%;
+  font-size: 1em;
+  margin-left: auto;
+}
 .newsLetter__input > input {
-  padding: 10px 20px;
+  padding: 15px 30px;
   outline: none;
   border: none;
+  font-size: 1em;
   opacity: 0.4;
   border-radius: 30px 0 0 30px;
   width: 200px;
+  margin-left: auto;
+  width: 50%;
 }
 
 .newsLetter__input > input::placeholder,
@@ -203,7 +218,8 @@
 }
 
 .newsLetter__input > button {
-  padding: 10px 20px;
+  font-size: 1em;
+  padding: 15px 30px;
   border: none;
   outline: none;
   border-radius: 0 30px 30px 0;

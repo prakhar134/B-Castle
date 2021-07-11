@@ -17,14 +17,18 @@ const authState = (state = initialState, action) => {
         user: action.payload,
         msg: 'User is Signed In!!',
       };
+    case 'LOGOUT_USER':
+      return {
+        isAuthenticated: false, 
+        user: null, 
+        msg: 'User Logged Out !!'
+      }
     case 'SIGNED_UP':
       return {
-        isAuthenticated: false,
+        isAuthenticated: true,
         user: action.payload,
         msg: 'User Registered Successfully!!',
       };
-    case 'SIGNED_OUT':
-      return { isAuthenticated: false, user: null, msg: 'User Logged Out !!' };
     case 'ERROR':
       return { isAuthenticated: false, user: null, msg: 'Invalid Request' };
     default:

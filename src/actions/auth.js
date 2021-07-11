@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { url } from '../api';
+import history from '../Utilities/history';
 import setAuthToken from '../Utilities/setAuthToken';
 
 export const Signin = (body) => async (dispatch, getState) => {
@@ -35,6 +36,12 @@ export const Signup = (body) => async (dispatch, getState) => {
     });
   return data;
 };
+
+export const logoutUser = () => async dispatch => {
+  localStorage.removeItem('token')
+  dispatch({ type: 'LOGOUT_USER' })
+  history.push('/')
+}
 
 export const getUser = (token) => async (dispatch, getState) => {
   setAuthToken(token)

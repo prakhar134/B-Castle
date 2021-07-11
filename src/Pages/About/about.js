@@ -1,11 +1,12 @@
 import React from "react";
 import "./about.css";
+import homepage from '../../static/illustrations/Homepage.jpg'
 
 const About = () => {
   return (
     <div className="About" id="about">
       <div className="about__image">
-        <img src="https://via.placeholder.com/500" height="500px" width="500px" alt="" />
+        <img src={homepage} style={{objectFit: 'contain'}} height="500px" width="500px" alt="" />
       </div>
       <div className="about__content">
         <h1 className="about__content__heaing">What is Bitcoin</h1>

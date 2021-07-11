@@ -7,6 +7,7 @@ import Features from '../Features/features';
 import News from '../News/News';
 import map from '../../static/icons/map.svg';
 import arrow from '../../static/icons/arrow.svg';
+import { RiWallet2Fill } from 'react-icons/ri'
 import './home.css';
 
 const home = () => {
@@ -42,6 +43,7 @@ const home = () => {
             <img src={arrow} className="getstarted__arrow" alt=""/>
             <div className="getstarted__cards__card">
               {/* <div>image</div> */}
+              <RiWallet2Fill size="3em" color="#4f48cf"/>
               <h1>Create Your Wallet</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -54,6 +56,7 @@ const home = () => {
             <img src={arrow} className="getstarted__arrow_2" alt=""/>
             <div className="getstarted__cards__card">
               {/* <div>image</div> */}
+              <RiWallet2Fill size="3em" color="#5170b7" />
               <h1>Create Your Wallet</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -66,6 +69,7 @@ const home = () => {
             <div>
               {/* <img src="https://via.placeholder.com/50" alt="" /> */}
             </div>
+              <RiWallet2Fill size="3em" color="#55c684"/>
             <h1>Create Your Wallet</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -79,8 +83,8 @@ const home = () => {
       {/* Subscribe to our newsletter */}
       <div className="newsLetter">
         <div className="newsLetter__content">
-          <h2>Subsrcibe to our Newsletter</h2>
-          <p>
+          <h2>Subscribe to our Newsletter</h2>
+          <p  style={{fontSize: '1em'}}>
             Sign up for weekly industry updates, insider perspectives and
             in-depth market analysis.
           </p>

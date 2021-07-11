@@ -36,13 +36,17 @@
 }
 
 .Modal {
+  position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+
   width: 300px;
-  position: relative;
-  top: 5rem;
   background-color: white;
   padding: 3rem;
-  margin: auto;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .modal__heading {
@@ -66,11 +70,12 @@
   font-size: 1rem;
   background-color: #f2f2f2;
   border: none;
+  width: 100%;
 }
 
 .login__btn {
   padding: 10px;
-  width: -webkit-fill-available;
+  width: 100%;
   margin-bottom: 0.5rem;
   background-color: #5ab6d4;
   color: white;
