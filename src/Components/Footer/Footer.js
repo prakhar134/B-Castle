@@ -1,15 +1,15 @@
-import React from "react";
-import "./Footer.css";
+import React from 'react';
+import './Footer.css';
 import {
   FaFacebook,
   FaGooglePlus,
   FaTwitter,
   FaInstagram,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer" id="contact">
       <div className="footer__logo">
         <img alt="" src="https://via.placeholder.com/150x70" />
         <p>

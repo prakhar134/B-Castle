@@ -26,6 +26,7 @@
 .about__content__description {
   max-width: 80%;
   color: #8c8c8c;
+  text-align: justify;
 }
 
 .about__content__btn {

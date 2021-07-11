@@ -1,10 +1,10 @@
-import React from "react";
-import "./News.css";
-import { FaRegComments, FaRegHeart } from "react-icons/fa";
+import React from 'react';
+import './News.css';
+import { FaRegComments, FaRegHeart } from 'react-icons/fa';
 
 const News = () => {
   return (
-    <div className="news">
+    <div className="news" id="news">
       <h1 className="news__heading">Latest News</h1>
       <p>Bitcoin is the simplest way to exchange money at very low cost.</p>
       <div className="news__cards">

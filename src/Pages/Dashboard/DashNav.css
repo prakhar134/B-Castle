@@ -1,11 +1,20 @@
-.nav__bar {
+.nav__bar__dash__ {
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1rem;
   align-items: center;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  background: rgb(79, 72, 207);
+  background: linear-gradient(
+    90deg,
+    rgba(79, 72, 207, 1) 29%,
+    rgba(85, 200, 131, 1) 100%
+  );
 }
 
-.nav__bar__options {
+.nav__bar__dash____options {
   list-style-type: none;
   display: flex;
   margin: 0;
@@ -14,7 +23,7 @@
   color: white;
 }
 
-.nav__bar__options > button {
+.nav__bar__dash____options > button {
   border-radius: 20px;
   padding: 10px;
   border: none;
@@ -25,13 +34,13 @@
   border: 1px solid white;
 }
 
-.nav__bar__options > button:hover {
+.nav__bar__dash____options > button:hover {
   cursor: pointer;
   background-color: white;
   color: rgb(82, 82, 82);
 }
 
-.nav__bar__option {
+.nav__bar__dash____option {
   margin: 0 1rem;
 }
 

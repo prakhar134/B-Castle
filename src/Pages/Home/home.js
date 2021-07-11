@@ -31,7 +31,7 @@ const home = () => {
       <About />
       <Features />
       {/* Get started homepage */}
-      <div className="getstarted">
+      <div className="getstarted" id="solution">
         <h1 className="getstarted__heading">Get Started With Bitcoin</h1>
         <p>
           Start learning about Bitcoin with interactive tutorials. It's fun,
@@ -41,7 +41,7 @@ const home = () => {
           <div className="getstarted__arrow_card">
             <img src={arrow} className="getstarted__arrow" alt=""/>
             <div className="getstarted__cards__card">
-              <div>image</div>
+              {/* <div>image</div> */}
               <h1>Create Your Wallet</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -53,7 +53,7 @@ const home = () => {
           <div className="getstarted__arrow_card">
             <img src={arrow} className="getstarted__arrow_2" alt=""/>
             <div className="getstarted__cards__card">
-              <div>image</div>
+              {/* <div>image</div> */}
               <h1>Create Your Wallet</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -64,7 +64,7 @@ const home = () => {
           </div>
           <div className="getstarted__cards__card">
             <div>
-              <img src="https://via.placeholder.com/50" alt="" />
+              {/* <img src="https://via.placeholder.com/50" alt="" /> */}
             </div>
             <h1>Create Your Wallet</h1>
             <p>

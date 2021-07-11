@@ -1,7 +1,19 @@
-import "./App.css";
-import Routes from "./Utilities/Routes";
+import './App.css';
+import { useEffect } from 'react';
+import { connect } from 'react-redux';
+import Routes from './Utilities/Routes';
+import { getUser } from './actions/auth';
 
-function App() {
+function App(props) {
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      const refresh = async () => {
+        await props.getUser(token);
+      };
+      refresh();
+    }
+  }, []);
   return (
     <div className="App">
       <Routes />
@@ -9,4 +21,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect(null, { getUser })(App);
