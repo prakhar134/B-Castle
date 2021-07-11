@@ -13,11 +13,11 @@ const Ourteam = () => {
       <div className="ourTeam__cards">
         <div className="ourTeam__cards__card">
           <div className="teamMember__image">
-            <img src="https://via.placeholder.com/150" alt="" />
+            <img src="https://via.placeholder.com/200" height="200px" width="200px" alt="" />
           </div>
           <p className="teamMember__name">Tom Binegar</p>
           <p className="teamMember__post">Business Development</p>
-          <div classroom="teamMember__socialMedia">
+          <div className="teamMember__socialMedia">
             <FaFacebook />
             <FaTwitter />
             <FaLinkedin />
@@ -25,11 +25,11 @@ const Ourteam = () => {
         </div>
         <div className="ourTeam__cards__card">
           <div className="teamMember__image">
-            <img src="https://via.placeholder.com/150" alt="" />
+            <img src="https://via.placeholder.com/200" height="200px" width="200px" alt="" />
           </div>
           <p className="teamMember__name">Jackson Nash</p>
           <p className="teamMember__post">Business Development</p>
-          <div classroom="teamMember__socialMedia">
+          <div className="teamMember__socialMedia">
             <FaFacebook />
             <FaTwitter />
             <FaLinkedin />
@@ -37,11 +37,11 @@ const Ourteam = () => {
         </div>
         <div className="ourTeam__cards__card">
           <div className="teamMember__image">
-            <img src="https://via.placeholder.com/150" alt="" />
+            <img src="https://via.placeholder.com/200" height="200px" width="200px" alt="" />
           </div>
           <p className="teamMember__name">Tom Binegar</p>
           <p className="teamMember__post">Business Development</p>
-          <div classroom="teamMember__socialMedia">
+          <div className="teamMember__socialMedia">
             <FaFacebook />
             <FaTwitter />
             <FaLinkedin />
@@ -49,11 +49,11 @@ const Ourteam = () => {
         </div>
         <div className="ourTeam__cards__card">
           <div className="teamMember__image">
-            <img src="https://via.placeholder.com/150" alt="" />
+            <img src="https://via.placeholder.com/200" height="200px" width="200px" alt="" />
           </div>
           <p className="teamMember__name">Melissa Barth</p>
           <p className="teamMember__post">Product Manager</p>
-          <div classroom="teamMember__socialMedia">
+          <div className="teamMember__socialMedia">
             <FaFacebook />
             <FaTwitter />
             <FaLinkedin />
@@ -61,14 +61,14 @@ const Ourteam = () => {
         </div>
         <div className="ourTeam__cards__card">
           <div className="teamMember__image">
-            <img src="https://via.placeholder.com/150" alt="" />
+            <img src="https://via.placeholder.com/200" height="200px" width="200px" alt="" />
           </div>
           <p className="teamMember__name">Katy Abrahams</p>
           <p className="teamMember__post">Head of Design</p>
-          <div classroom="teamMember__socialMedia">
-            <FaFacebook classroom="teamMember__socialMedia_icon" />
-            <FaTwitter  classroom="teamMember__socialMedia_icon"/>
-            <FaLinkedin  classroom="teamMember__socialMedia_icon"/>
+          <div className="teamMember__socialMedia">
+            <FaFacebook className="teamMember__socialMedia_icon" />
+            <FaTwitter  className="teamMember__socialMedia_icon"/>
+            <FaLinkedin  className="teamMember__socialMedia_icon"/>
           </div>
         </div>
       </div>

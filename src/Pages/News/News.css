@@ -31,6 +31,7 @@
 }
 
 .news__card__content {
+  cursor: pointer;
   padding: 1.5rem;
 }
 

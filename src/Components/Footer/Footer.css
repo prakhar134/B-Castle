@@ -20,6 +20,7 @@
 .footer__resources__list > p {
   color: #8c8c8c;
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 .footer__quickLinks > p {
@@ -30,6 +31,7 @@
 .footer__quickLinks__list > p {
   color: #8c8c8c;
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 .footer__followUs > p {
@@ -43,6 +45,7 @@
 
 .footer__followUs__icons > svg {
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 .facebookIcon {

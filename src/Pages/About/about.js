@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="About" id="about">
       <div className="about__image">
-        <img src="https://via.placeholder.com/800" alt="" />
+        <img src="https://via.placeholder.com/500" height="500px" width="500px" alt="" />
       </div>
       <div className="about__content">
         <h1 className="about__content__heaing">What is Bitcoin</h1>

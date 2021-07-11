@@ -3,7 +3,7 @@ const initialState = {
   user: null,
   msg: null,
 };
-export default (state = initialState, action) => {
+const authState = (state = initialState, action) => {
   switch (action.type) {
     case 'SIGNED_IN':
       return {
@@ -31,3 +31,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default authState

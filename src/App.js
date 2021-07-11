@@ -8,12 +8,9 @@ function App(props) {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      const refresh = async () => {
-        await props.getUser(token);
-      };
-      refresh();
+        props.getUser(token);
     }
-  }, []);
+  }, [props]);
   return (
     <div className="App">
       <Routes />

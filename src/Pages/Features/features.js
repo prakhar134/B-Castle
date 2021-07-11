@@ -3,6 +3,8 @@ import './features.css';
 import { IoWalletOutline } from 'react-icons/io5';
 import { VscDeviceMobile } from 'react-icons/vsc';
 import { BiSupport } from 'react-icons/bi';
+import { SiBuymeacoffee } from 'react-icons/si';
+import { AiOutlineSafety } from 'react-icons/ai';
 import { RiExchangeDollarFill } from 'react-icons/ri';
 
 const Features = () => {
@@ -27,7 +29,7 @@ const Features = () => {
           </div>
         </div>
         <div className="features__content__feature">
-          <div className="features__content__icon">Icon</div>
+          <div className="features__content__icon"><AiOutlineSafety/></div>
           <div className="features__content__description">
             <p>Safe & Secure</p>
             <p>
@@ -77,7 +79,7 @@ const Features = () => {
           </div>
         </div>
         <div className="features__content__feature">
-          <div className="features__content__icon">Icon</div>
+          <div className="features__content__icon"><SiBuymeacoffee/></div>
           <div className="features__content__description">
             <p>Recuring Buys</p>
             <p>

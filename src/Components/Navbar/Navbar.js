@@ -122,7 +122,7 @@ const Navbar = (props) => {
                 type="email"
                 placeholder="Email"
                 onChange={(e) => {
-                  Signup.password = e.target.value;
+                  Signup.email = e.target.value;
                   setSignup(Signup);
                 }}
               />
@@ -138,7 +138,7 @@ const Navbar = (props) => {
                 type="password"
                 placeholder="Re-type Password"
                 onChange={(e) => {
-                  Login.confirmPassword = e.target.value;
+                  Signup.confirmPassword = e.target.value;
                   setLogin(Login);
                 }}
               />

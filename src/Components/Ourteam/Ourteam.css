@@ -29,7 +29,7 @@
 
 .ourTeam__cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .teamMember__image > img {
   border-radius: 50%;
@@ -40,10 +40,17 @@
   -webkit-box-shadow: 1px 0px 10px rgba(216, 216, 216, 0.884);
   -moz-box-shadow: 1px 0px 10px rgba(216, 216, 216, 0.884);
   padding: 3.0rem;
+  min-width: 150px;
+  width: 12%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .teamMember__socialMedia {
-  font-size: xx-large;
+  cursor: pointer;
+  font-size: x-large;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
