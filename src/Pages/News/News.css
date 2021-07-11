@@ -52,3 +52,12 @@
 .news__card__footer > span {
   color: #8c8c8c;
 }
+
+@media (max-width: 800px) {
+  .news__cards{
+    flex-direction: column;
+  }
+  .news__cards__card{
+    margin: 10px;
+  }
+}

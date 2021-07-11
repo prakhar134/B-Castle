@@ -42,3 +42,21 @@
 .about__content__btn:hover {
   cursor: pointer;
 }
+
+@media (max-width: 800px) {
+  .About{
+    flex-direction: column-reverse;
+    padding: 1rem;
+  }
+  .about__image{
+    width: 100%;
+    padding: 0;
+  }
+  .about__content{
+    width: 100%;
+    padding: 1rem;
+  }
+  .about__content__description{
+    max-width: 95%;
+  }
+}

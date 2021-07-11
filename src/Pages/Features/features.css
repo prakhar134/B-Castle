@@ -58,3 +58,14 @@
   margin-top: 0;
   text-align: left;
 }
+
+@media (max-width: 800px) {
+  .features__content{
+    grid-template-columns: auto;
+    padding: 0;
+  }
+  .features__content__feature{
+    padding: 0;
+    flex-direction: column;
+  }
+}

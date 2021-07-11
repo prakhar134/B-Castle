@@ -57,3 +57,11 @@
 .teamMember__socialMedia_icon {
   margin: 2px;
 }
+
+@media (max-width: 800px) {
+  .ourTeam__cards{
+    justify-content: flex-start;
+    overflow: scroll;
+    width: 100%;
+  }
+}

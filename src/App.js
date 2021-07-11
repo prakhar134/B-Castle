@@ -1,4 +1,5 @@
 import './App.css';
+import './Responsive.css';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Routes from './Utilities/Routes';

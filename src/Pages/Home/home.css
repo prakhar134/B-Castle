@@ -226,3 +226,49 @@
   color: #35358a;
   cursor: pointer;
 }
+@media (max-width: 800px) {
+  .header__getStarted{
+    overflow: hidden;
+  }
+  .header__svg{
+    right: -75rem;
+  }
+  .header__getStarted__content{
+    margin: auto;
+    padding: 25px;
+  }
+  .header__getStarted__content > button{
+    margin: 10px 0;
+  }
+  .getstarted{
+    padding: 1rem;
+  }
+  .getstarted__cards{
+    padding: 0;
+    flex-direction: column;
+  }
+  .newsLetter{
+    flex-direction: column;
+    padding: 4rem 0;
+  }
+  .newsLetter__content > p,
+  .newsLetter__content > h2{
+    margin-left: 15px;
+    margin-right: auto;
+  }
+  .newsLetter__input{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .newsLetter__input > input{
+    width: 40%;
+    margin-left: unset;
+  }
+  .getstarted__arrow,
+  .getstarted__arrow_2,
+  .getstarted__arrow_3{
+    display: none;
+  }
+}

@@ -60,3 +60,9 @@
 .twitterIcon {
   color: #45c3ec;
 }
+
+@media (max-width: 800px) {
+  .footer{
+    flex-direction: column;
+  }
+}
