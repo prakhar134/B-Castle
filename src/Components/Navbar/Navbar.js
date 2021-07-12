@@ -179,7 +179,7 @@ const Navbar = (props) => {
             <button>Logout</button>
           ) : (
             <button onClick={() => setLoginModal(true)}>
-              Sign Up/ Sign In
+              Sign Up / Sign In
             </button>
           )}
         </ul>

@@ -1,5 +1,5 @@
 .ourTeam {
-  padding: 2rem;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
@@ -36,9 +36,7 @@
 }
 .ourTeam__cards__card {
   border-radius: 5px;
-  box-shadow: 1px 0px 10px rgba(216, 216, 216, 0.884);
-  -webkit-box-shadow: 1px 0px 10px rgba(216, 216, 216, 0.884);
-  -moz-box-shadow: 1px 0px 10px rgba(216, 216, 216, 0.884);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 3.0rem;
   min-width: 150px;
   width: 12%;

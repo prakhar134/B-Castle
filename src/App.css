@@ -1,3 +1,25 @@
+.customOverlay{
+  background-color: #000000cc;
+}
+.customModal{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #ccc;
+  padding: 50px 15px;
+  max-height: 90%;
+}
+.react-responsive-modal-closeButton{
+  outline: none;
+  border: none;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 800px) {
     .header__getStarted{
       overflow: hidden;

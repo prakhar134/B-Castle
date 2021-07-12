@@ -2,9 +2,9 @@ import React from 'react';
 import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import Ourteam from '../../Components/Ourteam/Ourteam';
-import About from '../About/about';
-import Features from '../Features/features';
-import News from '../News/News';
+import About from '../../Components/About/about';
+import Features from '../../Components/Features/features';
+import News from '../../Components/News/News';
 import map from '../../static/icons/map.svg';
 import arrow from '../../static/icons/arrow.svg';
 import { RiWallet2Fill } from 'react-icons/ri'

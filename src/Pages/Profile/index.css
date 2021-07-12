@@ -1,0 +1,47 @@
+.payCard_small{
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+    max-width: 400px;    
+    padding: 35px 15px;
+    text-align: center;
+    border: 2px solid gray;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.payCard_small > h4{
+    font-weight: 400;
+}
+.payCard_small > h1{
+    margin: 0;
+    font-weight: 600;
+}
+.payCard_small > ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+}
+.payCard_small > ul > li{
+    list-style-type: none;
+    text-align: center;
+    padding: 10px 0;
+}
+.recommend{
+    border: 3px solid blue;
+    background-color: #fff;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.payCard_small:hover{
+    background-color: whitesmoke;
+    transition: 0.3s ease;
+}
+.recommend > h1{
+    color: blue;
+}
