@@ -6,6 +6,8 @@ import Dash from '../Pages/Dashboard';
 import history from './history';
 import news from '../Pages/News/news';
 import ProfileUpdate from '../Pages/Profile/profileUpdate';
+import AdminLogin from '../Pages/admin/adminLogin';
+import AdminPanel from '../Pages/admin/adminPanel';
 
 const Routes = () => {
   return (
@@ -16,6 +18,8 @@ const Routes = () => {
         <Route path="/dashboard" component={Dash} />
         <Route path="/news" component={news} />
         <Route path="/update" component={ProfileUpdate} />
+        <Route path="/admin" component={AdminLogin} />
+        <Route path="/adminPanel" component={AdminPanel} />
       </Switch>
     </React.Fragment>
   );

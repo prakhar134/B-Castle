@@ -1,70 +1,65 @@
-import React from 'react';
-import './News.css';
-import { FaRegComments, FaRegHeart } from 'react-icons/fa';
+import React, { useState } from 'react'
+import LoginHead from '../../Components/LoginHead/loginHead'
+import Sidebar from '../../Components/Sidebar'
+import { useSelector, useDispatch } from 'react-redux'
+import Moment from 'react-moment'
+import { Link } from 'react-router-dom'
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
+import { getCurrentNews } from '../../actions/news'
+import NewsModal from '../../Components/News/NewsModal'
 
 const News = () => {
-  return (
-    <div className="news" id="news">
-      <h1 className="news__heading">Latest News</h1>
-      <p>Bitcoin is the simplest way to exchange money at very low cost.</p>
-      <div className="news__cards">
-        <div className="news__cards__card">
-          <div className="news__card__image">
-            <img src="https://images.unsplash.com/photo-1605792657660-596af9009e82?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Yml0Y29pbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="" />
-          </div>
-          <div className="news__card__content">
-            <span>03 JAN 2018</span>
-            <p>Coinbas eto Reopen the GDAX Bitcoin Cash-Euro Order Book</p>
-            <div className="news__card__footer">
-              <span>Admin</span>
-              <span>
-                <FaRegHeart /> 234 Likes
-              </span>
-              <span>
-                <FaRegComments /> 08 Comments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="news__cards__card">
-          <div className="news__card__image">
-            <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW9uZXl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="" />
-          </div>
-          <div className="news__card__content">
-            <span>03 JAN 2018</span>
-            <p>Coinbas eto Reopen the GDAX Bitcoin Cash-Euro Order Book</p>
-            <div className="news__card__footer">
-              <span>Admin</span>
-              <span>
-                <FaRegHeart /> 234 Likes
-              </span>
-              <span>
-                <FaRegComments /> 08 Comments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="news__cards__card">
-          <div className="news__card__image">
-            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmV3c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="" />
-          </div>
-          <div className="news__card__content">
-            <span>03 JAN 2018</span>
-            <p>Coinbas eto Reopen the GDAX Bitcoin Cash-Euro Order Book</p>
-            <div className="news__card__footer">
-              <span>Admin</span>
-              <span>
-                <FaRegHeart /> 234 Likes
-              </span>
-              <span>
-                <FaRegComments /> 08 Comments
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
-export default News;
+    const dispatch = useDispatch()
+    const { news } = useSelector(state => state.News)
+
+    const [open, setOpen] = useState(false);
+    const onOpenModal = (id) => {
+        dispatch(getCurrentNews(id))
+        setOpen(true);
+    }
+    const onCloseModal = () => {
+        setOpen(false);
+        dispatch({type: 'REMOVE_CURRENT'})
+    }
+
+    return (
+        <>
+            <LoginHead />
+            <Sidebar />
+            <Modal classNames={{
+            overlay: 'customOverlay',
+            modal: 'customModal',
+            }} 
+            open={open} onClose={onCloseModal} center>
+                <NewsModal />
+            </Modal>
+            <div style={{width: 'calc(100% - 300px)', marginLeft: '300px', display: 'flex', justifyContent: 'space-between', padding: '15px 5px', alignItems: 'center', boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
+                <div className="news" id="news">
+                <h1 className="news__heading">Latest News</h1>
+                <p>Bitcoin is the simplest way to exchange money at very low cost.</p>
+                <div className="news__cards">
+                    { news.map((ne) => (
+                    <div onClick={() => onOpenModal(ne._id)} className="news__cards__card">
+                    <div className="news__card__image">
+                        <img width="400px" height="400px" style={{objectFit: 'cover'}} src={ne.image} alt="" />
+                    </div>
+                    <div className="news__card__content">
+                        <span><Moment format="YYYY/MM/DD HH:MM">{Date( parseInt( ne._id.toString().substring(0,8), 16 ) * 1000 )}</Moment></span>
+                        <p>{ne.title}</p>
+                        <div className="news__card__footer">
+                        <span>Author: Admin Aakash</span>
+                        </div>
+                    </div>
+                    </div>
+                    )) }
+                </div>
+                <Link to="/dashboard" className="special">Go Back</Link>
+            </div>
+            </div>
+        </>
+    )
+}
+
+export default News

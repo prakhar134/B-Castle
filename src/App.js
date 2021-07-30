@@ -11,7 +11,7 @@ function App(props) {
     props.getNews()
     const token = localStorage.getItem('token');
     if (token) {
-        props.getUser(token);
+        props.getUser();
     }
   }, [props]);
   return (

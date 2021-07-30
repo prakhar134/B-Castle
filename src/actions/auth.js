@@ -2,6 +2,8 @@ import axios from 'axios';
 import { url } from '../api';
 import history from '../Utilities/history';
 import setAuthToken from '../Utilities/setAuthToken';
+import toastifier from "toastifier";
+import "toastifier/dist/toastifier.min.css";
 
 export const Signin = (body) => async (dispatch, getState) => {
   const data = await axios
@@ -15,6 +17,7 @@ export const Signin = (body) => async (dispatch, getState) => {
     .catch((err) => {
       console.log(err);
       dispatch({ type: 'ERROR' });
+      toastifier("Invalid Credentials", { type: "error" })
       return null;
     });
   return data;
@@ -31,6 +34,7 @@ export const Signup = (body) => async (dispatch, getState) => {
     })
     .catch((err) => {
       console.log(err);
+      toastifier("Can't Register now", { type: "error" })
       dispatch({ type: 'ERROR' });
       return null;
     });
@@ -43,8 +47,9 @@ export const logoutUser = () => async dispatch => {
   history.push('/')
 }
 
-export const getUser = (token) => async (dispatch, getState) => {
-  setAuthToken(token)
+export const getUser = () => async (dispatch, getState) => {
+  const tokenStorage = localStorage.getItem('token')
+  setAuthToken(tokenStorage)
   const data = await axios
     .get(`${url}/self`)
     .then((res) => {
@@ -54,7 +59,23 @@ export const getUser = (token) => async (dispatch, getState) => {
     .catch((err) => {
       console.log(err);
       dispatch({ type: 'ERROR' });
+      toastifier("Something went wrong", { type: "error" })
       return null;
     });
   return data;
+};
+
+export const updateUser = (updatedData) => async dispatch => {
+  try {
+    const token = localStorage.getItem('token')
+    setAuthToken(token)
+    const data = await axios.put(`${url}/self`, updatedData)
+    getUser()
+    return data;
+  } catch (error) {
+    console.log(error);
+    dispatch({ type: 'ERROR' });
+      toastifier("Something went wrong", { type: "error" })
+      return null;
+  }
 };

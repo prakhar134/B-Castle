@@ -1,0 +1,17 @@
+.filter{
+    background-color: whitesmoke;
+    border: 2px solid grey;
+    font-size: 1.2em;
+    width: 50%;
+    margin: 15px auto;
+    padding: 10px 25px;
+    outline: none;
+    border-radius: 5px;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}

@@ -1,0 +1,45 @@
+.bar{
+    display: grid;
+    width: 80% !important;
+    padding: 15px 0;
+    grid-template-columns: repeat(4, 1fr);
+    border: 2px solid grey;
+    text-align: center;
+    background-color: #fff;
+    margin: 0 auto;
+}
+.bar > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 25%;
+}
+.isUser{
+    background-color: rgba(0, 250, 50, 0.2);
+    color: green;
+    padding: 5px 15px;
+    text-align: center;
+    margin: auto;
+    max-width: 50px;
+    border-radius: 30px;
+}
+.isAdmin{
+    background-color: rgba(250, 50, 0, 0.2);
+    color: red;
+    padding: 5px 15px;
+    text-align: center;
+    border-radius: 30px;
+    max-width: 50px;
+    margin: auto;
+}
+.balance{
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+.pointy{
+    cursor: pointer;
+}
+.textRed{
+    color: red;
+}

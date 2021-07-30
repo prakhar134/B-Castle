@@ -1,17 +1,31 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { updateUser } from '../../actions/auth'
 import './index.css'
+import toastifier from "toastifier";
+import "toastifier/dist/toastifier.min.css";
 
 const UserInfo = (props) => {
 
-    const { user } = useSelector(state => state.Auth)
+    const { user } = useSelector(state => state?.Auth)
+    const [name, setName] = useState(user?.name)
+    const [email, setEmail] = useState(user?.email)
+    const [password, setPassword] = useState()
+    const [confirmPassword, setPassword2] = useState()
     const [msg, setMsg] = useState("You are updating profile")
+    const dispatch = useDispatch()
     if(!user)
         return <span className="loading">Loading...</span>
 
     const onSubmit = (e) => {
         e.preventDefault()
-        setMsg("Profile updated")
+        if(password !== confirmPassword)
+            toastifier("Password dont match", { type: 'error' })
+        else{
+            const data = { name, email, password, confirmPassword }
+            dispatch(updateUser(data))
+            setMsg("Profile updated")   
+        }
     }
 
     if(props.update)
@@ -27,20 +41,20 @@ const UserInfo = (props) => {
                     </div>
                     <div className="input_group">
                         <label htmlFor="name">Update your Name</label>
-                        <input type="text" name="name" value={user.name} />
+                        <input type="text" name="name" onChange={e => setName(e.target.value)} value={name} />
                     </div>
                     <div className="input_group">
                         <label htmlFor="mail">Update your Email</label>
-                        <input type="email" name="mail" value={user.email} />
+                        <input type="email" name="mail" onChange={e => setEmail(e.target.value)} value={email} />
                     </div>
                     <div className="group_2">
                         <div className="input_group">
                             <label htmlFor="pass1">Update your Password</label>
-                            <input type="password" name="pass1" value="newPassword" />
+                            <input type="password" name="pass1" onChange={e => setPassword(e.target.value)} value={password || "newPassword"} />
                         </div>
                         <div className="input_group">
                             <label htmlFor="pass2">Confirm your Password</label>
-                            <input type="password" name="pass2" value="newPassword" />
+                            <input type="password" name="pass2" onChange={e => setPassword2(e.target.value)} value={confirmPassword || "newPassword"} />
                         </div>
                     </div>
                     <input style={{marginTop: '25px'}} type="submit" value="Update Profile" className="special" />
