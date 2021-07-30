@@ -1,6 +1,7 @@
 const initialState = {
     users: [],
     user: {},
+    price: {}
   };
   const adminState = (state = initialState, action) => {
     switch (action.type) {
@@ -10,16 +11,11 @@ const initialState = {
             ...state,
             users: action.payload
         };
-      case 'CURRENT_NEWS':
-        return {
-            ...state,
-            current: action.payload
-        };
-      case 'REMOVE_CURRENT':
+      case 'GET_PRICE':
         return {
           ...state,
-          current: {}
-        }
+          price: action.payload
+        };
       default:
         return state;
     }

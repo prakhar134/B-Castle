@@ -17,3 +17,23 @@ export const getAllUsers = () => async dispatch => {
             return null;
         }
 }
+
+export const getPrice = (symbol) => async dispatch => {
+    try {
+        const token = localStorage.getItem('token')
+        setAuthToken(token)
+        const res = await axios.get(`${url}/price/${symbol}`)
+        const payload = {
+            price: res.data.price,
+            symbol
+        }
+        dispatch({
+            type: "GET_PRICE",
+            payload
+        })
+        } catch (error) {
+            console.log(error);
+            dispatch({ type: 'ERROR' });
+            return null;
+        }
+}

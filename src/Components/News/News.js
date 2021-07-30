@@ -13,7 +13,7 @@ const News = () => {
       <h1 className="news__heading">Latest News</h1>
       <p>Bitcoin is the simplest way to exchange money at very low cost.</p>
       <div className="news__cards">
-        { news.slice(0,3).map((ne) => (
+        { news && news?.slice(0,3)?.map((ne) => (
           <div className="news__cards__card">
           <div className="news__card__image">
             <img width="400px" height="400px" style={{objectFit: 'cover'}} src={ne.image} alt="" />

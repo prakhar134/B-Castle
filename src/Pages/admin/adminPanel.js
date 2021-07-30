@@ -5,14 +5,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getAllUsers } from '../../actions/admin'
 import UserBar from '../../Components/UserBar/UserBar'
 import './admin.css'
-import toastifier from "toastifier";
-import "toastifier/dist/toastifier.min.css";
 
 const AdminPanel = () => {
 
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getAllUsers())
+        // eslint-disable-next-line 
     }, [])
     var { users } = useSelector(state => state.Admin)
     const [value, setValue] = useState("")

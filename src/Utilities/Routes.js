@@ -5,6 +5,7 @@ import home from '../Pages/Home/home';
 import Dash from '../Pages/Dashboard';
 import history from './history';
 import news from '../Pages/News/news';
+import Trades from '../Pages/Trades/trades';
 import ProfileUpdate from '../Pages/Profile/profileUpdate';
 import AdminLogin from '../Pages/admin/adminLogin';
 import AdminPanel from '../Pages/admin/adminPanel';
@@ -17,6 +18,7 @@ const Routes = () => {
         <Route path="/about" component={about} />
         <Route path="/dashboard" component={Dash} />
         <Route path="/news" component={news} />
+        <Route path="/my-trades" component={Trades} />
         <Route path="/update" component={ProfileUpdate} />
         <Route path="/admin" component={AdminLogin} />
         <Route path="/adminPanel" component={AdminPanel} />
