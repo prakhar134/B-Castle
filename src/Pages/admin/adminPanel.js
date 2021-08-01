@@ -5,6 +5,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getAllUsers } from '../../actions/admin'
 import UserBar from '../../Components/UserBar/UserBar'
 import './admin.css'
+import News from '../../Components/News/News'
+import { Link } from 'react-router-dom'
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
+import AddNews from '../../Components/addNews/AddNews'
 
 const AdminPanel = () => {
 
@@ -16,6 +21,7 @@ const AdminPanel = () => {
     var { users } = useSelector(state => state.Admin)
     const [value, setValue] = useState("")
     const [usersF, setUsersF] = useState([])
+    const [newsModal, setNewsModal] = useState(false)
 
     const onChange = e => {
         setValue(e.target.value)
@@ -28,20 +34,28 @@ const AdminPanel = () => {
             <LoginHead />
                 <div className="main" style={{width: 'calc(100% - 300px)', marginLeft: '300px'}}>
                     <input placeholder="Search Users" type="text" value={value} onChange={onChange} className="filter" />
-                    <div style={{width: "100%"}} className="table">
+                    { (usersF.length === 0 && value.length !== 0)  && <p className="noTrades">No Users Found</p>}
+                    <div style={{width: "100%", marginBottom: '50px'}} className="table">
                         {
                             value.length === 0 ?
-                                users?.map(user => (
-                                    <UserBar key={user._id} id={user.id} name={user.name} email={user.email} balance={user.balance} admin={user.isAdmin} />
+                            users?.slice(0, 10)?.map(user => (
+                                <UserBar key={user._id} id={user._id} name={user.name} email={user.email} balance={user.balance} admin={user.isAdmin} />
                                 ))
-                            :
+                                :
                                 usersF?.map(user => (
-                                    <UserBar key={user._id} id={user.id} name={user.name} email={user.email} balance={user.balance} admin={user.isAdmin} />
-                                ))
-                        }
+                                    <UserBar key={user._id} id={user._id} name={user.name} email={user.email} balance={user.balance} admin={user.isAdmin} />
+                                    ))
+                                }
                     </div>
+                    <News />
+                    <Link style={{marginBottom: '50px'}} className="special" onClick={() => setNewsModal(true)}>Add News</Link>
                 </div>
             <Sidebar />
+            <Modal classNames={{
+                    modal: 'customFormModal',
+                }} open={newsModal} onClose={() => setNewsModal(false)} center>
+                <AddNews />
+            </Modal>
         </div>
     )
 }

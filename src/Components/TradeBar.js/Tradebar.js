@@ -35,6 +35,11 @@ const Tradebar = () => {
                     </tr>
                 ))}
             </table>
+            {
+                (!trades || trades.length === 0) && (
+                    <p className="noTrades">No Trade Found</p>
+                )
+            }
         </div>
     )
 }

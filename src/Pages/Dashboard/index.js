@@ -18,7 +18,7 @@ const Dashboard = () => {
             </div>
             <div style={{width: 'calc(100% - 300px)', backgroundColor: 'aliceblue', marginLeft: '300px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}} className="main_display">
                 <Tradebar />
-                <Link className="special" to="/my-trades">See All Trades</Link>
+                <Link style={{marginTop: "35px"}} className="special" to="/my-trades">See All Trades</Link>
             </div>
             <div style={{width: 'calc(100% - 300px)', backgroundColor: 'aliceblue', marginLeft: '300px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingottom: '25px'}} className="main_display">
                 <News />

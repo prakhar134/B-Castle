@@ -1,9 +1,11 @@
 import React from 'react'
 import style from './index.module.css'
-const UserBar = ({id, name, email, balance, admin}) => {
+import { useHistory } from 'react-router'
+const UserBar = ({id, name, email, balance, admin }) => {
 
+    const history = useHistory()
     const goToUser = id => {
-        console.log(id);
+        history.push(`/admin/user/${id}`)
     }
 
     return (

@@ -16,6 +16,11 @@ const initialState = {
           ...state,
           price: action.payload
         };
+      case 'GET_USER':
+        return {
+          ...state,
+          user: action.payload
+        };
       default:
         return state;
     }

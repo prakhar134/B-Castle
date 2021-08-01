@@ -9,6 +9,7 @@ import Trades from '../Pages/Trades/trades';
 import ProfileUpdate from '../Pages/Profile/profileUpdate';
 import AdminLogin from '../Pages/admin/adminLogin';
 import AdminPanel from '../Pages/admin/adminPanel';
+import User from '../Pages/admin/user';
 
 const Routes = () => {
   return (
@@ -20,6 +21,7 @@ const Routes = () => {
         <Route path="/news" component={news} />
         <Route path="/my-trades" component={Trades} />
         <Route path="/update" component={ProfileUpdate} />
+        <Route path="/admin/user/:id" component={User} />
         <Route path="/admin" component={AdminLogin} />
         <Route path="/adminPanel" component={AdminPanel} />
       </Switch>

@@ -18,6 +18,22 @@ export const getAllUsers = () => async dispatch => {
         }
 }
 
+export const getUser = (id) => async dispatch => {
+    try {
+        const token = localStorage.getItem('token')
+        setAuthToken(token)
+        const res = await axios.get(`${url}/user/${id}`)
+        dispatch({
+            type: "GET_USER",
+            payload: res.data
+        })
+        } catch (error) {
+            console.log(error);
+            dispatch({ type: 'ERROR' });
+            return null;
+        }
+}
+
 export const getPrice = (symbol) => async dispatch => {
     try {
         const token = localStorage.getItem('token')
