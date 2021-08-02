@@ -1,14 +1,24 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addNews } from '../../actions/admin'
 import './addNews.css'
 
-const AddNews = () => {
+const AddNews = (props) => {
 
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
     const [image, setImage] = useState("")
+    const dispatch = useDispatch()
 
     const onSubmit = (e) => {
         e.preventDefault()
+        const body = {
+            title, 
+            description,
+            image
+        }
+        props.setModal()
+        dispatch(addNews(body))
     }
 
     return (

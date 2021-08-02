@@ -28,6 +28,7 @@ const AdminPanel = () => {
         users = users.filter(user => ((user.name.indexOf(value) !== -1) || (user.email.indexOf(value) !== -1)))
         setUsersF(users)
     }
+    const onClose = () => setNewsModal(false)
 
     return (
         <div>
@@ -53,8 +54,8 @@ const AdminPanel = () => {
             <Sidebar />
             <Modal classNames={{
                     modal: 'customFormModal',
-                }} open={newsModal} onClose={() => setNewsModal(false)} center>
-                <AddNews />
+                }} open={newsModal} onClose={onClose} center>
+                <AddNews setModal={onClose} />
             </Modal>
         </div>
     )

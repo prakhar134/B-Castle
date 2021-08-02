@@ -1,6 +1,9 @@
 import axios from 'axios'
 import { url } from '../api';
 import setAuthToken from '../Utilities/setAuthToken';
+import toastifier from "toastifier";
+import "toastifier/dist/toastifier.min.css";
+
 
 export const getAllUsers = () => async dispatch => {
     try {
@@ -34,6 +37,62 @@ export const getUser = (id) => async dispatch => {
         }
 }
 
+export const addBalance = (id, amount) => async dispatch => {
+    try {
+        const token = localStorage.getItem('token')
+        setAuthToken(token)
+        const body = {
+            amount
+        }
+        const res = await axios.patch(`${url}/addBalance/${id}`, body)
+        dispatch({
+            type: "GET_USER",
+            payload: res.data
+        })
+        } catch (error) {
+            toastifier("Cant perform this action right now", { type: 'error' })
+            console.log(error);
+            dispatch({ type: 'ERROR' });
+            return null;
+        }
+}
+
+export const addTrade = (id, data) => async dispatch => {
+    try {
+        const token = localStorage.getItem('token')
+        setAuthToken(token)
+        const res = await axios.patch(`${url}/addTrade/${id}`, data)
+        dispatch({
+            type: "GET_USER",
+            payload: res.data
+        })
+        
+        } catch (error) {
+            toastifier("Cant perform this action", { type: 'error' })
+            console.log(error);
+            dispatch({ type: 'ERROR' });
+            return null;
+        }
+}
+
+export const addNews = (data) => async dispatch => {
+    try {
+        const token = localStorage.getItem('token')
+        setAuthToken(token)
+        const res = await axios.post(`${url}/news`, data)
+        dispatch({
+            type: "ADD_NEWS",
+            payload: res.data
+        })
+        
+        } catch (error) {
+            toastifier("Cant perform this action", { type: 'error' })
+            console.log(error);
+            dispatch({ type: 'ERROR' });
+            return null;
+        }
+}
+
 export const getPrice = (symbol) => async dispatch => {
     try {
         const token = localStorage.getItem('token')
@@ -49,6 +108,7 @@ export const getPrice = (symbol) => async dispatch => {
         })
         } catch (error) {
             console.log(error);
+            toastifier("Please try again later", { type: 'error' })
             dispatch({ type: 'ERROR' });
             return null;
         }

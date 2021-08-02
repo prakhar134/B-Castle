@@ -8,6 +8,11 @@ const initialState = {
         return {
             news: action.payload
         };
+      case 'ADD_NEWS':
+        return {
+            ...state,
+            news: [...state.news, action.payload]
+        };
       case 'CURRENT_NEWS':
         return {
             ...state,

@@ -26,6 +26,9 @@ const User = () => {
     const onClick = symbol => {
         dispatch(getPrice(symbol))
     }
+    const onClose = () => {
+        setModal(false)
+    }
 
     if(!user)
     return(<div style={{width: 'calc(100% - 300px)', marginLeft: '300px'}}>
@@ -34,11 +37,11 @@ const User = () => {
 
     return (
         <>
-            <Modal open={modal} onClose={() => setModal(false)} center>
-                <AddBalance />
+            <Modal open={modal} onClose={onClose} center>
+                <AddBalance setModal={onClose}/>
             </Modal>
-            <Modal open={modal2} onClose={() => setModal2(false)} center>
-                <AddTrade />
+            <Modal open={modal2} onClose={onClose} center>
+                <AddTrade setModal={onClose}/>
             </Modal>
             <LoginHead />
             <div style={{width: 'calc(100% - 300px)', marginLeft: '300px'}}>
@@ -66,7 +69,7 @@ const User = () => {
                     <th>Current Price</th>
                     <th></th>
                 </tr>
-                {user && user.trades && user.trades.reverse()?.slice(0, 3)?.map(trade => (
+                {user && user.trades && user.trades.reverse()?.map(trade => (
                     <tr>
                         <td style={{fontSize: '1.1em', fontWeight: '600'}}>{trade.name}</td>
                         <td>{trade.price}</td>
