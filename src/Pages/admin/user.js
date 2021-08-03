@@ -29,6 +29,9 @@ const User = () => {
     const onClose = () => {
         setModal(false)
     }
+    const onClose2 = () => {
+        setModal2(false)
+    }
 
     if(!user)
     return(<div style={{width: 'calc(100% - 300px)', marginLeft: '300px'}}>
@@ -40,8 +43,8 @@ const User = () => {
             <Modal open={modal} onClose={onClose} center>
                 <AddBalance setModal={onClose}/>
             </Modal>
-            <Modal open={modal2} onClose={onClose} center>
-                <AddTrade setModal={onClose}/>
+            <Modal open={modal2} onClose={onClose2} center>
+                <AddTrade setModal={onClose2}/>
             </Modal>
             <LoginHead />
             <div style={{width: 'calc(100% - 300px)', marginLeft: '300px'}}>

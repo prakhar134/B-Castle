@@ -4,7 +4,7 @@ import about from '../Components/About/about';
 import home from '../Pages/Home/home';
 import Dash from '../Pages/Dashboard';
 import history from './history';
-import news from '../Pages/News/news';
+import news from '../Pages/News/News';
 import Trades from '../Pages/Trades/trades';
 import ProfileUpdate from '../Pages/Profile/profileUpdate';
 import AdminLogin from '../Pages/admin/adminLogin';
