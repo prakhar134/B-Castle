@@ -46,7 +46,9 @@
 @media (max-width: 800px) {
   .About{
     flex-direction: column-reverse;
-    padding: 1rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
   .about__image{
     width: 100%;
@@ -54,9 +56,26 @@
   }
   .about__content{
     width: 100%;
-    padding: 1rem;
+    padding: 0;
+    margin: auto;
+  }
+  .about__content > h1,
+  .about__content > p{
+    width: 100%;
+    margin: auto;
+    padding: 15px 0;
+    text-align: center;
+  }
+  .about__content > h1{
+    margin-top: 2rem;
   }
   .about__content__description{
     max-width: 95%;
+  }
+  .about__content__btn {
+    margin: 15px auto;
+  }
+  .about__image{
+    height: 50%;
   }
 }

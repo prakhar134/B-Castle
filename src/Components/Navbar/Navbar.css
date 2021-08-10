@@ -97,3 +97,14 @@ p > span {
 p > span:hover {
   cursor: pointer;
 }
+.signUpBtn2{
+  display: none;
+}
+@media (max-width: 800px){
+  .nav__bar{
+    display: none;
+  }
+  .signUpBtn2{
+    display: block;
+  }
+}

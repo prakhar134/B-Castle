@@ -40,3 +40,21 @@
     outline: none;
     border: none;
 }
+@media (max-width: 800px) {
+    .add__news{
+        display: flex;
+        flex-direction: column;
+        width: 92%;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .add__news > form{
+        width: 300px;
+    }
+    .add__news > form > input, .add__news > form > input,
+    .add__news > form > input, .add__news > form > textarea{
+        width: 90% !important;
+        margin: 5px auto;
+    }
+}

@@ -12,7 +12,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 25%;
 }
 .isUser{
     background-color: rgba(0, 250, 50, 0.2);
@@ -42,4 +41,10 @@
 }
 .textRed{
     color: red;
+}
+@media (max-width: 800px) {
+    .bar{
+        width: 100%;
+        border: none;
+    }
 }

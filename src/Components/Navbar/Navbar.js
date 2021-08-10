@@ -160,6 +160,16 @@ const Navbar = (props) => {
         </Modal>
       </React.Fragment>
 
+      <div style={{margin: 'auto', textAlign: 'center', marginTop: '2rem'}} className="signUpBtn2">
+        {authenticated ? (
+          <button className="special2">Logout</button>
+        ) : (
+          <button className="special2" onClick={() => setLoginModal(true)}>
+            Sign Up / Sign In
+          </button>
+        )}
+      </div>
+
       <div className="nav__bar">
         <div>Icon</div>
         <ul className="nav__bar__options">

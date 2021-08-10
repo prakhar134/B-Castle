@@ -19,7 +19,7 @@ const NewsModal = () => {
                         </div>
                     </div>
             <h1 style={{fontSize: '1.5em', textAlign: 'center', fontWeight: 500}}>{current && current?.title}</h1>
-            <p style={{fontSize: '1.1em', padding: '15px 50px', textAlign:'justify', textAlignLast: 'center'}}>{current && current?.description}</p>
+            <p style={{fontSize: '1.1em', padding: '15px 20px', textAlign:'justify', textAlignLast: 'center'}}>{current && current?.description}</p>
         </div>
     )
 }

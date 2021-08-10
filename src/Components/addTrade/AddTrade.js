@@ -8,6 +8,7 @@ const AddTrade = (props) => {
     const [type, setType] = useState("buy")
     const [price, setPrice] = useState("")
     const [quantity, setQuantity] = useState("")
+    const [dateOfTrade, setDate] = useState("")
     const dispatch = useDispatch()
 
     const id = window.location.href.split('/')[window.location.href.split('/').length - 1]
@@ -18,7 +19,8 @@ const AddTrade = (props) => {
             name,
             price,
             type,
-            quantity
+            quantity,
+            dateOfTrade
         }
         dispatch(addTrade(id, data))
         props.setModal()
@@ -34,6 +36,7 @@ const AddTrade = (props) => {
                     <input type="number" name="price" step="1" value={price} onChange={e => setPrice(e.target.value)} placeholder="Enter Price" />
                     <input type="number" name="qty" step="1" value={quantity} onChange={e => setQuantity(e.target.value)} placeholder="Enter quantity" />
                 </div>
+                <input type="date" name="date" value={dateOfTrade} onChange={e => setDate(e.target.value)} placeholder="Enter date trade was made" />
                 <input type="submit" className="special" value="Add trade" />
             </form>
         </div>

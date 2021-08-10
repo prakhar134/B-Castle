@@ -30,8 +30,8 @@ const UserInfo = (props) => {
 
     if(props.update)
         return (
-            <div>
-                <h1 style={{textAlign: 'center'}}>{msg} of {user.name.split(' ')[0]}</h1>
+            <>
+                <h1 style={{textAlign: 'center', maxWidth: '80%'}}>{msg} of {user.name.split(' ')[0]}</h1>
                 <h3 style={{color: '#555', marginTop: '-15px', marginBottom: '35px', fontWeight: 400, textAlign: 'center'}}>{user.email}</h3>
 
                 <form onSubmit={onSubmit} style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
@@ -59,7 +59,7 @@ const UserInfo = (props) => {
                     </div>
                     <input style={{marginTop: '25px'}} type="submit" value="Update Profile" className="special" />
                 </form>
-            </div>
+            </>
         )
 
     return (

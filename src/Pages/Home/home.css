@@ -233,6 +233,9 @@
   .header__svg{
     right: -75rem;
   }
+  .getstarted__heading{
+    text-align: center;
+  }
   .header__getStarted__content{
     margin: auto;
     padding: 25px;
@@ -270,5 +273,9 @@
   .getstarted__arrow_2,
   .getstarted__arrow_3{
     display: none;
+  }
+  .getstarted__cards__card{
+    padding: 1rem;
+    margin: 1rem 0;
   }
 }

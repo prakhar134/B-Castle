@@ -7,13 +7,13 @@ const LoginHead = () => {
     const dispatch = useDispatch()
 
     return (
-        <div style={{width: 'calc(100% - 300px)', marginLeft: '300px', height: '50px', display: 'flex', justifyContent: 'space-between', padding: '15px 5px', alignItems: 'center', boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
+        <div className="main_display" style={{height: '50px', display: 'flex', justifyContent: 'space-between', padding: '15px 5px', alignItems: 'center', boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
         <ul style={{listStyle: "none", display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <li style={{padding: "5px 15px"}}>
-                <a style={{textDecoration: 'none'}} href="#!">Home</a>
+            <li style={{padding: "5px 8px"}}>
+                <a style={{textDecoration: 'none'}} href="/dashboard">Dashboard</a>
             </li>
-            <li style={{padding: "5px 15px"}}>
-                <a style={{textDecoration: 'none'}} href="#!">Contact</a>
+            <li style={{padding: "5px 8px"}}>
+                <a style={{textDecoration: 'none'}} href="/my-trades">Trades</a>
             </li>
         </ul>    
         <ul style={{listStyle: "none", display: 'flex', alignItems: 'center', justifyContent: 'center'}}>

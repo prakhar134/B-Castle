@@ -33,10 +33,10 @@ const AdminPanel = () => {
     return (
         <div>
             <LoginHead />
-                <div className="main" style={{width: 'calc(100% - 300px)', marginLeft: '300px'}}>
+                <div style={{overflowX: 'hidden'}} className="main main_display">
                     <input placeholder="Search Users" type="text" value={value} onChange={onChange} className="filter" />
                     { (usersF.length === 0 && value.length !== 0)  && <p className="noTrades">No Users Found</p>}
-                    <div style={{width: "100%", marginBottom: '50px'}} className="table">
+                    <div style={{width: "100%", overflowX: 'scroll', marginBottom: '50px'}} className="table">
                         {
                             value.length === 0 ?
                             users?.slice(0, 10)?.map(user => (

@@ -65,4 +65,7 @@
   .footer{
     flex-direction: column;
   }
+  .footer__logo{
+    display: none;
+  }
 }

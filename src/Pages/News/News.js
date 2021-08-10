@@ -35,7 +35,7 @@ const News = () => {
             open={open} onClose={onCloseModal} center>
                 <NewsModal />
             </Modal>
-            <div style={{width: 'calc(100% - 300px)', marginLeft: '300px', display: 'flex', justifyContent: 'space-between', padding: '15px 5px', alignItems: 'center', boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
+            <div className="main_display" style={{display: 'flex', justifyContent: 'space-between', padding: '15px 5px', alignItems: 'center', boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}}>
                 <div className="news" id="news">
                 <h1 className="news__heading">Latest News</h1>
                 <p>Bitcoin is the simplest way to exchange money at very low cost.</p>

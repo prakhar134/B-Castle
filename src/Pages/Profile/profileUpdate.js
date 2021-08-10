@@ -9,10 +9,10 @@ const ProfileUpdate = () => {
         <>
             <LoginHead />
             <Sidebar />
-            <div style={{width: 'calc(100% - 300px)', marginLeft: '300px', marginTop: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingottom: '25px'}} className="main_display">
+            <div style={{ marginTop: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingottom: '25px'}} className="main_display">
                 <UserInfo update={true}/>
             </div>
-            <div style={{width: 'calc(100% - 300px)', marginLeft: '300px', marginTop: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingottom: '25px'}} className="main_display">
+            <div style={{ marginTop: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingottom: '25px'}} className="main_display">
                 <h1>Want to add Balance?</h1>
                 <div style={{width: '100%'}} className="flex">
                     <div className="payCard_small">

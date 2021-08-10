@@ -55,8 +55,16 @@
 }
 
 @media (max-width: 800px) {
+  .news{
+    padding: 2em 0;
+  }
+  .news > p {
+    margin:15px;
+  }
   .news__cards{
     flex-direction: column;
+    display: flex;
+    align-items: center;
   }
   .news__cards__card{
     margin: 10px;

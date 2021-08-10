@@ -10,10 +10,10 @@ const UserBar = ({id, name, email, balance, admin }) => {
 
     return (
         <div onClick={() => !admin && goToUser(id)} className={[style.bar, !admin && style.pointy].join(' ')}>
-            <span className={style.name}>{name}</span>
-            <span className={style.email}>{email}</span>
-            <span className={admin ? style.isAdmin : style.isUser}>{admin ? "admin" : "user"}</span>
-            <span className={[style.balance, (parseInt(balance) < 200 && !admin) && style.textRed].join(' ')}>{!admin ? balance : "-"}</span>
+            <span style={{minWidth: '120px'}} className={style.name}>{name}</span>
+            <span style={{minWidth: '200px'}} className={style.email}>{email}</span>
+            <span style={{minWidth: '50px'}} className={admin ? style.isAdmin : style.isUser}>{admin ? "admin" : "user"}</span>
+            <span style={{minWidth: '150px'}} className={[style.balance, (parseInt(balance) < 200 && !admin) && style.textRed].join(' ')}>{!admin ? balance : "-"}</span>
         </div>
     )
 }

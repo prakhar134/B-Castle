@@ -29,3 +29,9 @@
 .input_group > input:hover{
     background-color: #f7f7f7;
 }
+
+@media (max-width: 800px) {
+    .group_2{
+        flex-wrap: wrap;
+    }
+}

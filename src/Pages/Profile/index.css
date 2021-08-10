@@ -46,3 +46,9 @@
 .recommend > h1{
     color: blue;
 }
+@media (max-width: 800px){
+    .payCard_small{
+        width: 80%;
+        margin: 10px 35px;
+    }
+}
