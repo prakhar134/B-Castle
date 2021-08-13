@@ -5,6 +5,7 @@ import './index.css'
 import { Link } from 'react-router-dom'
 import LoginHead from '../../Components/LoginHead/loginHead';
 import UserInfo from '../../Components/UserInfo/userInfo';
+import UserStats from '../../Components/UserStats/userStats';
 import Tradebar from '../../Components/TradeBar.js/Tradebar';
 
 const Dashboard = () => {
@@ -15,6 +16,9 @@ const Dashboard = () => {
             <div style={{backgroundColor: 'aliceblue', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}} className="main_display">
                 <UserInfo />
                 <Link className="special" to="/update">Update Profile</Link>
+            </div>
+            <div style={{backgroundColor: 'aliceblue', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}} className="main_display">
+                <UserStats />
             </div>
             <div style={{backgroundColor: 'aliceblue', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}} className="main_display">
                 <Tradebar />

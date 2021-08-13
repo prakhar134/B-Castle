@@ -34,7 +34,7 @@ const UserInfo = (props) => {
                 <h1 style={{textAlign: 'center', maxWidth: '80%'}}>{msg} of {user.name.split(' ')[0]}</h1>
                 <h3 style={{color: '#555', marginTop: '-15px', marginBottom: '35px', fontWeight: 400, textAlign: 'center'}}>{user.email}</h3>
 
-                <form onSubmit={onSubmit} style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
+                <form onSubmit={onSubmit} style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', width: '80%', margin: 'auto'}}>
                     <div style={{marginBottom: '25px'}} className="input_group">
                         <label>Current Balance</label>
                         <h2 style={{margin: '-2px', fontSize: '2rem'}}>₹{user.balance}</h2>
@@ -50,11 +50,11 @@ const UserInfo = (props) => {
                     <div className="group_2">
                         <div className="input_group">
                             <label htmlFor="pass1">Update your Password</label>
-                            <input type="password" name="pass1" onChange={e => setPassword(e.target.value)} value={password || "newPassword"} />
+                            <input type="password" name="pass1" onChange={e => setPassword(e.target.value)} placeholder="********" value={password} />
                         </div>
                         <div className="input_group">
                             <label htmlFor="pass2">Confirm your Password</label>
-                            <input type="password" name="pass2" onChange={e => setPassword2(e.target.value)} value={confirmPassword || "newPassword"} />
+                            <input type="password" name="pass2" onChange={e => setPassword2(e.target.value)} placeholder="********" value={confirmPassword} />
                         </div>
                     </div>
                     <input style={{marginTop: '25px'}} type="submit" value="Update Profile" className="special" />
