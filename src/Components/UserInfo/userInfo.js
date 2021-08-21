@@ -8,8 +8,8 @@ import "toastifier/dist/toastifier.min.css";
 const UserInfo = (props) => {
 
     const { user } = useSelector(state => state?.Auth)
-    const [name, setName] = useState(user?.name)
-    const [email, setEmail] = useState(user?.email)
+    const [name, setName] = useState(user?.user.name)
+    const [email, setEmail] = useState(user?.user.email)
     const [password, setPassword] = useState()
     const [confirmPassword, setPassword2] = useState()
     const [msg, setMsg] = useState("You are updating profile")
@@ -31,13 +31,13 @@ const UserInfo = (props) => {
     if(props.update)
         return (
             <>
-                <h1 style={{textAlign: 'center', maxWidth: '80%'}}>{msg} of {user.name.split(' ')[0]}</h1>
-                <h3 style={{color: '#555', marginTop: '-15px', marginBottom: '35px', fontWeight: 400, textAlign: 'center'}}>{user.email}</h3>
+                <h1 style={{textAlign: 'center', maxWidth: '80%'}}>{msg} of {user?.user.name.split(' ')[0]}</h1>
+                <h3 style={{color: '#555', marginTop: '-15px', marginBottom: '35px', fontWeight: 400, textAlign: 'center'}}>{user?.user.email}</h3>
 
                 <form onSubmit={onSubmit} style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', width: '80%', margin: 'auto'}}>
                     <div style={{marginBottom: '25px'}} className="input_group">
                         <label>Current Balance</label>
-                        <h2 style={{margin: '-2px', fontSize: '2rem'}}>₹{user.balance}</h2>
+                        <h2 style={{margin: '-2px', fontSize: '2rem'}}>₹{user?.user.balance}</h2>
                     </div>
                     <div className="input_group">
                         <label htmlFor="name">Update your Name</label>
@@ -64,8 +64,8 @@ const UserInfo = (props) => {
 
     return (
         <div>
-            <h1>Welcome Abroad, {user.name.split(' ')[0]}</h1>
-            <h3 style={{color: '#555', marginTop: '-15px', marginBottom: '35px', fontWeight: 400, textAlign: 'center'}}>{user.email}</h3>
+            <h1>Welcome Abroad, {user?.user.name?.split(' ')[0]}</h1>
+            <h3 style={{color: '#555', marginTop: '-15px', marginBottom: '35px', fontWeight: 400, textAlign: 'center'}}>{user?.user.email}</h3>
         </div>
     )
 }

@@ -9,7 +9,7 @@ const Trades = () => {
     const { user } = useSelector(state => state?.Auth)
     const { price } = useSelector(state => state?.Admin)
     const dispatch = useDispatch()
-    const trades = user?.trades
+    const trades = user?.user?.trades
 
     const onClick = symbol => {
         dispatch(getPrice(symbol))
@@ -30,16 +30,16 @@ const Trades = () => {
                     <th style={{minWidth: '100px'}}>Coin</th>
                     <th>Trading Price</th>
                     <th>Trading quantity</th>
-                    <th style={{minWidth: '100px'}}>Current Price</th>
-                    <th></th>
+                    <th>Trade type</th>
+                    <th style={{minWidth: '100px'}}>Trading Date</th>
                 </tr>
                 {trades && trades?.map(trade => (
                     <tr>
                         <td style={{fontSize: '1.2em', fontWeight: '600'}}>{trade.name}</td>
                         <td>{trade.price}</td>
                         <td>{trade.quantity}</td>
-                        <td>{ price.symbol !== trade.name ? <span onClick={() => onClick(trade.name)} style={{backgroundColor: 'whitesmoke', border: '2px solid grey', padding: '5px 10px', borderRadius: '5px', boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px', cursor: 'pointer', fontSize: '0.9em'}}>Get Price</span> : <span style={{fontWeight: 700, fontSize: '1.3em'}}>{price.price}</span>}</td>
                         <td><span style={trade.type === 'buy' ? {padding: '5px 20px', borderRadius: '15px', backgroundColor: 'rgba(0, 250, 50, 0.2)', color: 'green'} : {padding: '1px 20px', borderRadius: '15px', backgroundColor: 'rgba(250, 50, 0, 0.2)', color: 'red'}}>{trade.type}</span></td>
+                        <td>{trade.dateOfTrade}</td>
                     </tr>
                 ))}
             </table>
@@ -51,7 +51,8 @@ const Trades = () => {
                     <th>Coin</th>
                     <th>Trading Price</th>
                     <th>Trading quantity</th>
-                    <th></th>
+                    <th>Trade Type</th>
+                    <th>Trading Date</th>
                 </tr>
                 {trades && trades?.map(trade => (
                     <tr>
@@ -59,6 +60,7 @@ const Trades = () => {
                         <td>{trade.price}</td>
                         <td>{trade.quantity}</td>
                         <td><span style={trade.type === 'buy' ? {padding: '5px 20px', borderRadius: '15px', backgroundColor: 'rgba(0, 250, 50, 0.2)', color: 'green'} : {padding: '1px 20px', borderRadius: '15px', backgroundColor: 'rgba(250, 50, 0, 0.2)', color: 'red'}}>{trade.type}</span></td>
+                        <td>{trade.dateOfTrade}</td>
                     </tr>
                 ))}
             </table>

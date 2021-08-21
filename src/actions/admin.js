@@ -113,3 +113,43 @@ export const getPrice = (symbol) => async dispatch => {
             return null;
         }
 }
+
+export const getCurrent = amt => async dispatch => {
+    try {
+        dispatch({
+            type: 'GET_CURRENT',
+            payload: parseFloat(amt)
+        })
+    } catch (error) {
+        console.log(error);
+        dispatch({ type: 'ERROR' });
+        return null;
+    }
+}
+
+export const getProfit = amt => async dispatch => {
+    console.log(amt);
+    try {
+        dispatch({
+            type: 'GET_PROFIT',
+            payload: parseFloat(amt)
+        })
+    } catch (error) {
+        console.log(error);
+        dispatch({ type: 'ERROR' });
+        return null;
+    }
+}
+
+export const getInvestment = amt => async dispatch => {
+    try {
+        dispatch({
+            type: 'GET_INVESTMENT',
+            payload: parseFloat(amt)
+        })
+    } catch (error) {
+        console.log(error);
+        dispatch({ type: 'ERROR' });
+        return null;
+    }
+}

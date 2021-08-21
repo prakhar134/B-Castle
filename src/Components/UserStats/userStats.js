@@ -1,41 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 
 const UserStats = () => {
 
-    const { user } = useSelector(state => state?.Auth)
-    const [coins, setCoins] = useState(0)
-    const [invest, setInvest] = useState(0)
-
-    const calci = () => {
-        let x = 0, y = 0;
-        user?.trades.forEach(t => {
-            x = x + t.quantity;
-            y = y + (t.quantity * t.price)
-        })
-        setCoins(x)
-        setInvest(y)
-        console.log("object");
-    }
-
-    useEffect(() => {
-        calci()
-        // eslint-disable-next-line 
-    }, [user])
-    
-    if(!user)
-        return <span className="loading">Loading...</span>
+    const { current, profit, investment } = useSelector(state => state?.Admin)
 
     return (
         <div className="styled-box">
-            <div className="s-box s-box-1">
-                Coins in Account: {coins}
-            </div>
             <div className="s-box s-box-2">
-                Total Investment: ₹{invest}
+                Current Investment: ₹{investment.toFixed(2)}
             </div>
             <div className="s-box s-box-3">
-                Balance left: ₹{user.balance}
+                Current Value: ₹{current.toFixed(2)}
+            </div>
+            <div className="s-box s-box-1">
+                Current Profit: ₹{profit.toFixed(2)}
             </div>
         </div>
     )

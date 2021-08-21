@@ -7,6 +7,7 @@ import LoginHead from '../../Components/LoginHead/loginHead';
 import UserInfo from '../../Components/UserInfo/userInfo';
 import UserStats from '../../Components/UserStats/userStats';
 import Tradebar from '../../Components/TradeBar.js/Tradebar';
+import PortfolioSection from '../../Components/Portfolio/PortfolioSection';
 
 const Dashboard = () => {
     return (
@@ -21,7 +22,7 @@ const Dashboard = () => {
                 <UserStats />
             </div>
             <div style={{backgroundColor: 'aliceblue', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}} className="main_display">
-                <Tradebar />
+                <PortfolioSection />
                 <Link style={{marginTop: "35px"}} className="special" to="/my-trades">See All Trades</Link>
             </div>
             <div style={{backgroundColor: 'aliceblue', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingottom: '25px'}} className="main_display">
