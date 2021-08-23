@@ -8,8 +8,8 @@ import "toastifier/dist/toastifier.min.css";
 const UserInfo = (props) => {
 
     const { user } = useSelector(state => state?.Auth)
-    const [name, setName] = useState(user?.user.name)
-    const [email, setEmail] = useState(user?.user.email)
+    const [name, setName] = useState(user?.user?.name)
+    const [email, setEmail] = useState(user?.user?.email)
     const [password, setPassword] = useState()
     const [confirmPassword, setPassword2] = useState()
     const [msg, setMsg] = useState("You are updating profile")
@@ -64,8 +64,8 @@ const UserInfo = (props) => {
 
     return (
         <div>
-            <h1>Welcome Abroad, {user?.user.name?.split(' ')[0]}</h1>
-            <h3 style={{color: '#555', marginTop: '-15px', marginBottom: '35px', fontWeight: 400, textAlign: 'center'}}>{user?.user.email}</h3>
+            <h1>Welcome Abroad, {user?.user?.name?.split(' ')[0]}</h1>
+            <h3 style={{color: '#555', marginTop: '-15px', marginBottom: '35px', fontWeight: 400, textAlign: 'center'}}>{user?.user?.email}</h3>
         </div>
     )
 }

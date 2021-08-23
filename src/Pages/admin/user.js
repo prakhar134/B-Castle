@@ -48,19 +48,19 @@ const User = () => {
             </Modal>
             <LoginHead />
             <div className="main_display">
-                <p style={{fontSize: '2.5rem !important', textAlign: 'center', fontWeight: 700, color: user.balance < 200 ? "red" : "green" }} className="user_balance">₹{user.balance}</p>
+                <p style={{fontSize: '2.5rem !important', textAlign: 'center', fontWeight: 700, color: user?.balance < 200 ? "red" : "green" }} className="user_balance">₹{user?.balance}</p>
                 <div style={{marginBottom: '35px'}} className="flex">
-                    <span onClick={() => setModal2(true)} className={ user.balance > 200 ? "special" : "normal"}>Add Trade</span>
-                    <span onClick={() => setModal(true)} className={ user.balance > 200 ? "normal" : "special"}>Add Balance</span>
+                    <span onClick={() => setModal2(true)} className={ user?.balance > 200 ? "special" : "normal"}>Add Trade</span>
+                    <span onClick={() => setModal(true)} className={ user?.balance > 200 ? "normal" : "special"}>Add Balance</span>
                 </div>
                 <form id="hd" style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', width: '50%', margin: 'auto'}}>
                     <div className="input_group">
                         <label htmlFor="name">User's Name</label>
-                        <input type="text" name="name" value={user.name} />
+                        <input type="text" name="name" value={user?.name} />
                     </div>
                     <div className="input_group">
                         <label htmlFor="mail">User's Email</label>
-                        <input type="email" name="mail" value={user.email} />
+                        <input type="email" name="mail" value={user?.email} />
                     </div>
                 </form>
             <div style={{width: '100%', overflowX: 'scroll', marginLeft: '30px'}} >
@@ -73,7 +73,7 @@ const User = () => {
                         <th>Current Price</th>
                         <th></th>
                     </tr>
-                    {user && user.trades && user.trades.reverse()?.map(trade => (
+                    {user && user?.trades && user?.trades.reverse()?.map(trade => (
                         <tr>
                             <td style={{fontSize: '1.1em', fontWeight: '600'}}>{trade.name}</td>
                             <td>{trade.price}</td>
@@ -84,7 +84,7 @@ const User = () => {
                     ))}
                 </table>
                 {
-                    (!user.trades || user.trades.length === 0) && (
+                    (!user?.trades || user?.trades.length === 0) && (
                         <p className="noTrades">No Trade Found</p>
                     )
                 }

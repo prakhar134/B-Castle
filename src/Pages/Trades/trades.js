@@ -1,20 +1,12 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import LoginHead from '../../Components/LoginHead/loginHead'
 import Sidebar from '../../Components/Sidebar'
-import { getPrice } from '../../actions/admin'
 import print from 'ink-html'
 const Trades = () => {
 
     const { user } = useSelector(state => state?.Auth)
-    const { price } = useSelector(state => state?.Admin)
-    const dispatch = useDispatch()
-    const trades = user?.user?.trades
-
-    const onClick = symbol => {
-        dispatch(getPrice(symbol))
-    }
-
+    const trades = user?.user.trades
     const download = () => {
         print(document.getElementById('toDownload'))
     }

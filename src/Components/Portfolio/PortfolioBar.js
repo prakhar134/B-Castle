@@ -32,7 +32,7 @@ const Portfoliobar = ({ trade }) => {
             <td>{trade.price / trade.buy}</td>
             <td style={{minWidth: '100px'}}>{ price ? <span style={{fontWeight: 700}}>{price}</span> : <span style={{backgroundColor: 'whitesmoke', border: '2px solid grey', padding: '5px 10px', borderRadius: '5px', boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px', cursor: 'pointer', fontSize: '0.9em'}}>Get Price</span>}</td>
             <td>{price ? ((trade.quantity * price).toFixed(2)) : 0}</td>
-            <td style={{ fontWeight: 'bold', color: ((trade.quantity * price) - (trade.quantity * (trade.price / trade.buy))) > 0 ? "green" : "red" }} >{price ? ((trade.quantity * price) - (trade.quantity * (trade.price / trade.buy))).toFixed(2): 0}</td>
+            <td style={{ fontWeight: 'bold', color: ((trade.quantity * price) - (trade.quantity * (trade.price / trade.buy))) > 0 ? "green" : "red" }} >{price ? (((trade.quantity * price) - (trade.quantity * (trade.price / trade.buy))).toFixed(2) - (((trade.quantity * price) - (trade.quantity * (trade.price / trade.buy))).toFixed(2) * 0.2)): 0}</td>
         </tr>
     )
 }

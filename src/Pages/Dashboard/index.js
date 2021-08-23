@@ -23,7 +23,7 @@ const Dashboard = () => {
             </div>
             <div style={{backgroundColor: 'aliceblue', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}} className="main_display">
                 <PortfolioSection />
-                <Link style={{marginTop: "35px"}} className="special" to="/my-trades">See All Trades</Link>
+                <Link className="special" to="/my-trades">See All Trades</Link>
             </div>
             <div style={{backgroundColor: 'aliceblue', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingottom: '25px'}} className="main_display">
                 <News />

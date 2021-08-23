@@ -25,7 +25,7 @@ const AdminPanel = () => {
 
     const onChange = e => {
         setValue(e.target.value)
-        users = users.filter(user => ((user.name.indexOf(value) !== -1) || (user.email.indexOf(value) !== -1)))
+        users = users.filter(user => ((user?.name.indexOf(value) !== -1) || (user?.email.indexOf(value) !== -1)))
         setUsersF(users)
     }
     const onClose = () => setNewsModal(false)
@@ -40,11 +40,11 @@ const AdminPanel = () => {
                         {
                             value.length === 0 ?
                             users?.slice(0, 10)?.map(user => (
-                                <UserBar key={user._id} id={user._id} name={user.name} email={user.email} balance={user.balance} admin={user.isAdmin} />
+                                <UserBar key={user?._id} id={user?._id} name={user?.name} email={user?.email} balance={user?.balance} admin={user?.isAdmin} />
                                 ))
                                 :
                                 usersF?.map(user => (
-                                    <UserBar key={user._id} id={user._id} name={user.name} email={user.email} balance={user.balance} admin={user.isAdmin} />
+                                    <UserBar key={user?._id} id={user?._id} name={user?.name} email={user?.email} balance={user?.balance} admin={user?.isAdmin} />
                                     ))
                                 }
                     </div>

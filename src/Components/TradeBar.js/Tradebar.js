@@ -6,7 +6,7 @@ const Tradebar = () => {
 
     const { user } = useSelector(state => state?.Auth)
     const { price } = useSelector(state => state?.Admin)
-    const trades = user?.user?.trades
+    const trades = user?.user.trades
 
     const dispatch = useDispatch()
 

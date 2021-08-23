@@ -14,7 +14,7 @@ const UserStats = () => {
                 Current Value: ₹{current.toFixed(2)}
             </div>
             <div className="s-box s-box-1">
-                Current Profit: ₹{profit.toFixed(2)}
+                Current Net Profit: ₹{profit.toFixed(2)}
             </div>
         </div>
     )
