@@ -1,12 +1,18 @@
 import React from "react";
 import "./about.css";
-import homepage from '../../static/illustrations/Homepage.jpg'
+import homepage from "../../static/illustrations/Homepage.jpg";
 
-const About = () => {
+const About = (props) => {
   return (
     <div className="About" id="about">
       <div className="about__image">
-        <img src={homepage} style={{objectFit: 'contain'}} height="500px" width="500px" alt="" />
+        <img
+          src={homepage}
+          style={{ objectFit: "contain" }}
+          height="500px"
+          width="500px"
+          alt=""
+        />
       </div>
       <div className="about__content">
         <h1 className="about__content__heaing">What is Bitcoin</h1>
@@ -21,7 +27,12 @@ const About = () => {
           labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris
         </p>
-        <div className="about__content__btn">Get Started</div>
+        <div
+          onClick={() => props.setLoginModal(true)}
+          className="about__content__btn"
+        >
+          Get Started
+        </div>
       </div>
     </div>
   );

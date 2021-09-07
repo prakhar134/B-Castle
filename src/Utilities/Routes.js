@@ -1,15 +1,16 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import about from '../Components/About/about';
-import home from '../Pages/Home/home';
-import Dash from '../Pages/Dashboard';
-import history from './history';
-import news from '../Pages/News/News';
-import Trades from '../Pages/Trades/trades';
-import ProfileUpdate from '../Pages/Profile/profileUpdate';
-import AdminLogin from '../Pages/admin/adminLogin';
-import AdminPanel from '../Pages/admin/adminPanel';
-import User from '../Pages/admin/user';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import about from "../Components/About/about";
+import home from "../Pages/Home/home";
+import Dash from "../Pages/Dashboard";
+import history from "./history";
+import news from "../Pages/News/News";
+import Trades from "../Pages/Trades/trades";
+import ProfileUpdate from "../Pages/Profile/profileUpdate";
+import AdminLogin from "../Pages/admin/adminLogin";
+import AdminPanel from "../Pages/admin/adminPanel";
+import User from "../Pages/admin/user";
+import ResetPassword from "../Pages/ResetPassword";
 
 const Routes = () => {
   return (
@@ -24,6 +25,7 @@ const Routes = () => {
         <Route path="/admin/user/:id" component={User} />
         <Route path="/admin" component={AdminLogin} />
         <Route path="/adminPanel" component={AdminPanel} />
+        <Route path="/reset/password/:token" component={ResetPassword} />
       </Switch>
     </React.Fragment>
   );

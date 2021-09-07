@@ -3,7 +3,7 @@ export const tokenConfig = (getState) => {
   const token = getState().auth.accessToken;
   const config = {
     headers: {
-      Accept: 'application/json',
+      Accept: "application/json",
     },
   };
   if (token) {

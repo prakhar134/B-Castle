@@ -1,17 +1,18 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 import {
   FaFacebook,
   FaGooglePlus,
   FaTwitter,
   FaInstagram,
-} from 'react-icons/fa';
+} from "react-icons/fa";
+import logo from "../../static/icons/LOGO.png";
 
 const Footer = () => {
   return (
     <div className="footer" id="contact">
       <div className="footer__logo">
-        <img alt="" src="https://via.placeholder.com/150x70" height="70px" width="150px" />
+        <img alt="" className="logo" src={logo} height="70px" width="70px" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

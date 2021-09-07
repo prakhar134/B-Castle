@@ -1,7 +1,7 @@
-.customOverlay{
+.customOverlay {
   background-color: #000000cc;
 }
-.customModal{
+.customModal {
   overflow-x: hidden;
   overflow-y: scroll;
   display: flex;
@@ -11,86 +11,87 @@
   padding: 50px 15px;
   max-height: 90%;
 }
-.react-responsive-modal-closeButton{
+.react-responsive-modal-closeButton {
   outline: none;
   border: none;
 }
-.flex{
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.customFormModal{
+.customFormModal {
   border-radius: 15px;
 }
-.main_display{
+.main_display {
   width: calc(100% - 300px);
   margin-left: 300px;
 }
 @media (max-width: 800px) {
-    h1{
-      font-size: 2rem !important;
-      text-align: center;
-    }
-    p,
-    button,
-    input{
-      font-size: 0.9rem !important;
-    }
-    .header__getStarted{
-      overflow: hidden;
-      width: 100% !important;
-      text-align: center;
-    }
-    #hd{
-      display: none !important;
-    }
-    .normal{
-      margin-top: 10px !important;
-    }
-    .user_balance{
-      font-size: 2.5rem !important;
-    }
-    .flex{
-      flex-direction: column;
-    }
-    .header__svg{
-      right: -75rem;
-    }
-    .header__getStarted__content{
-      margin: auto;
-      padding: 25px;
-    }
-    .header__getStarted__content > h1{
-      margin: 0;
-    }
-    .header__getStarted__content > input{
-      margin: 0;
-    }
-    .header__getStarted__content > button{
-      margin: 10px 0;
-    }
-    .sidebar{
-      display: none;
-    }
-    .main_display{
-      width: 100%;
-      margin-left: 0;
-    }
-    .main_display > form{
-      text-align: center;
-    }
-    .react-responsive-modal-container{
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-    }
-    .react-responsive-modal-modal{
-      width: 95% !important;
-      margin: auto !important;
-      max-width: 280px;
-    }
-    .input_group{
-      width: 80%;
-    }
+  h1 {
+    font-size: 2rem !important;
+    text-align: center;
   }
+  p,
+  button,
+  input {
+    font-size: 0.9rem !important;
+  }
+  .header__getStarted {
+    overflow: hidden;
+    width: 100% !important;
+    text-align: center;
+  }
+  #hd {
+    display: none !important;
+  }
+  .normal {
+    margin-top: 10px !important;
+  }
+  .user_balance {
+    font-size: 2.5rem !important;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .header__svg {
+    right: -75rem;
+  }
+  .header__getStarted__content {
+    margin: auto;
+    padding: 25px;
+  }
+  .header__getStarted__content > h1 {
+    margin: 0;
+  }
+  .header__getStarted__content > input {
+    margin: 0;
+  }
+  .header__getStarted__content > button {
+    margin: 10px 0;
+  }
+  .sidebar {
+    display: none;
+  }
+  .main_display {
+    width: 100%;
+    margin-left: 0;
+  }
+  .main_display > form {
+    text-align: center;
+  }
+  .react-responsive-modal-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+  }
+  .react-responsive-modal-modal {
+    width: 95% !important;
+    margin: auto !important;
+    max-width: 280px;
+  }
+  .input_group {
+    width: 80%;
+  }
+}
