@@ -36,14 +36,14 @@ const Navbar = (props) => {
   const dispatch = useDispatch();
   const log = async (e) => {
     e.preventDefault();
-    const data = await props.Signin(Login);
+    const data = await props.Signin(Login, () => props.setLoginModal(false));
     if (data !== null) {
       window.location.href = "/dashboard";
     }
   };
   const register = async (e) => {
     e.preventDefault();
-    const data = await props.Register(Signup);
+    const data = await props.Register(Signup, () => props.setLoginModal(false));
     if (data !== null) {
       window.location.href = "/dashboard";
     }

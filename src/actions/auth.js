@@ -5,7 +5,7 @@ import setAuthToken from "../Utilities/setAuthToken";
 import toastifier from "toastifier";
 import "toastifier/dist/toastifier.min.css";
 
-export const Signin = (body) => async (dispatch, getState) => {
+export const Signin = (body, cb) => async (dispatch, getState) => {
   const data = await axios
     .post(`${url}/signin`, body)
     .then((res) => {
@@ -16,6 +16,7 @@ export const Signin = (body) => async (dispatch, getState) => {
     })
     .catch((err) => {
       console.log(err);
+      cb();
       dispatch({ type: "ERROR" });
       toastifier("Invalid Credentials", { type: "error" });
       return null;
@@ -23,7 +24,7 @@ export const Signin = (body) => async (dispatch, getState) => {
   return data;
 };
 
-export const Signup = (body) => async (dispatch, getState) => {
+export const Signup = (body, cb) => async (dispatch, getState) => {
   const data = await axios
     .post(`${url}/signup`, body)
     .then((res) => {
@@ -34,6 +35,7 @@ export const Signup = (body) => async (dispatch, getState) => {
     })
     .catch((err) => {
       console.log(err);
+      cb();
       toastifier("Can't Register now", { type: "error" });
       dispatch({ type: "ERROR" });
       return null;
