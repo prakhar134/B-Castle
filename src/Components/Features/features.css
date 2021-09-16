@@ -42,7 +42,7 @@
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 1.2rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .features__content__description {
@@ -60,11 +60,11 @@
 }
 
 @media (max-width: 800px) {
-  .features__content{
+  .features__content {
     grid-template-columns: auto;
     padding: 0;
   }
-  .features__content__feature{
+  .features__content__feature {
     padding: 0;
     flex-direction: column;
   }

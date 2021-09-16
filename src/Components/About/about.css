@@ -16,6 +16,9 @@
 .about__content {
   width: 50%;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about__content__heaing {
@@ -44,38 +47,38 @@
 }
 
 @media (max-width: 800px) {
-  .About{
+  .About {
     flex-direction: column-reverse;
     width: 100%;
     margin: 0;
     padding: 0;
   }
-  .about__image{
+  .about__image {
     width: 100%;
     padding: 0;
   }
-  .about__content{
+  .about__content {
     width: 100%;
     padding: 0;
     margin: auto;
   }
   .about__content > h1,
-  .about__content > p{
+  .about__content > p {
     width: 100%;
     margin: auto;
     padding: 15px 0;
     text-align: center;
   }
-  .about__content > h1{
+  .about__content > h1 {
     margin-top: 2rem;
   }
-  .about__content__description{
+  .about__content__description {
     max-width: 95%;
   }
   .about__content__btn {
     margin: 15px auto;
   }
-  .about__image{
+  .about__image {
     height: 50%;
   }
 }

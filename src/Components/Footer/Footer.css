@@ -17,10 +17,12 @@
   margin-bottom: 2rem;
 }
 
-.footer__resources__list > p {
+.footer__resources__list > a {
   color: #8c8c8c;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   cursor: pointer;
+  text-decoration: none;
+  display: block;
 }
 
 .footer__quickLinks > p {
@@ -28,10 +30,12 @@
   margin-bottom: 2rem;
 }
 
-.footer__quickLinks__list > p {
+.footer__quickLinks__list > a {
   color: #8c8c8c;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   cursor: pointer;
+  text-decoration: none;
+  display: block;
 }
 
 .footer__followUs > p {
@@ -62,10 +66,10 @@
 }
 
 @media (max-width: 800px) {
-  .footer{
+  .footer {
     flex-direction: column;
   }
-  .footer__logo{
+  .footer__logo {
     display: none;
   }
 }

@@ -1,91 +1,88 @@
-import React from 'react';
-import './features.css';
-import { IoWalletOutline } from 'react-icons/io5';
-import { VscDeviceMobile } from 'react-icons/vsc';
-import { BiSupport } from 'react-icons/bi';
-import { SiBuymeacoffee } from 'react-icons/si';
-import { AiOutlineSafety } from 'react-icons/ai';
-import { RiExchangeDollarFill } from 'react-icons/ri';
+import React from "react";
+import "./features.css";
+import { MdTouchApp, MdTrackChanges, MdSlowMotionVideo } from "react-icons/md";
+import { RiSkull2Fill } from "react-icons/ri";
+import { GiTimeBomb, GiHumanTarget } from "react-icons/gi";
 
 const Features = () => {
   return (
     <div className="features" id="features">
       <div className="features__heading">
-        <h1>Our Features</h1>
+        <h1>Our Services</h1>
         <p>Bitcoin is the simplest way to exchange money at very low cost.</p>
       </div>
       <div className="features__content">
         <div className="features__content__feature">
           <div className="features__content__icon">
-            <VscDeviceMobile />
+            <MdTouchApp />
           </div>
           <div className="features__content__description">
-            <p>Mobile Apps</p>
-            <p >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            </p>
-          </div>
-        </div>
-        <div className="features__content__feature">
-          <div className="features__content__icon"><AiOutlineSafety/></div>
-          <div className="features__content__description">
-            <p>Safe & Secure</p>
+            <p>Interactive learning</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              Detailed Technical & Fundamental Analysis, Market Sentiments,
+              Exchange Uses and Risk Management Strategies are Provided.
             </p>
           </div>
         </div>
         <div className="features__content__feature">
           <div className="features__content__icon">
-            <IoWalletOutline />
+            <GiTimeBomb />
           </div>
           <div className="features__content__description">
-            <p>Wallet</p>
+            <p>Real Time AI Based Analysis</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              Here you can grab some extra perks like heat-map, fear & greed
+              index meter, alt-coins risk calculator, market hike chart and
+              upcoming events.
             </p>
           </div>
         </div>
         <div className="features__content__feature">
           <div className="features__content__icon">
-            <BiSupport />
+            <MdTrackChanges />
           </div>
           <div className="features__content__description">
-            <p>Experts Support</p>
+            <p>Portfolio Tracker</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              We will help you to divide fundamental coins for optimal portfolio
+              management.
             </p>
           </div>
         </div>
         <div className="features__content__feature">
           <div className="features__content__icon">
-            <RiExchangeDollarFill />
+            <MdSlowMotionVideo />
           </div>
           <div className="features__content__description">
-            <p>Instant Exchange</p>
+            <p>Premium Live video</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              Exclusive Youtube Live Sessions Only for Our Premium Community on
+              Regular Updates & Queries.
             </p>
           </div>
         </div>
         <div className="features__content__feature">
-          <div className="features__content__icon"><SiBuymeacoffee/></div>
+          <div className="features__content__icon">
+            <GiHumanTarget />
+          </div>
           <div className="features__content__description">
-            <p>Recuring Buys</p>
+            <p>Accurate Premium Signals</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              Accurate and Analyzed calls are given by our Crypto Experts, and
+              Experienced Analyst based on Technical & Fundamental Analysis and
+              Insider News.
+            </p>
+          </div>
+        </div>
+        <div className="features__content__feature">
+          <div className="features__content__icon">
+            <RiSkull2Fill />
+          </div>
+          <div className="features__content__description">
+            <p>Better Risk Management</p>
+            <p>
+              To ensure the security of our community, SmartViewAI is providing
+              verified strategies to invest in fundamental based coins.
             </p>
           </div>
         </div>

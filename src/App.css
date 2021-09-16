@@ -27,6 +27,10 @@
   width: calc(100% - 300px);
   margin-left: 300px;
 }
+.screen-form {
+  background-color: aliceblue;
+  padding: 2rem;
+}
 @media (max-width: 800px) {
   h1 {
     font-size: 2rem !important;

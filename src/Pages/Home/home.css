@@ -117,8 +117,15 @@
   box-shadow: 1px 0px 30px rgba(216, 216, 216, 0.884);
   -webkit-box-shadow: 1px 0px 30px rgba(216, 216, 216, 0.75);
   -moz-box-shadow: 1px 0px 30px rgba(216, 216, 216, 0.884);
-  max-width: 300px;
+  width: 55%;
   margin: 0 2rem;
+  min-width: 250px;
+  max-width: 330px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .getstarted__cards__card > h1 {
@@ -151,7 +158,7 @@
   margin-top: 3rem;
 }
 .newsLetter:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100px;
@@ -195,7 +202,7 @@
   font-size: 0.8rem;
   margin-left: 100px;
 }
-.newsLetter__input{
+.newsLetter__input {
   width: 50%;
   font-size: 1em;
   margin-left: auto;
@@ -227,54 +234,54 @@
   cursor: pointer;
 }
 @media (max-width: 800px) {
-  .header__getStarted{
+  .header__getStarted {
     overflow: hidden;
   }
-  .header__svg{
+  .header__svg {
     right: -75rem;
   }
-  .getstarted__heading{
+  .getstarted__heading {
     text-align: center;
   }
-  .header__getStarted__content{
+  .header__getStarted__content {
     margin: auto;
     padding: 25px;
   }
-  .header__getStarted__content > button{
+  .header__getStarted__content > button {
     margin: 10px 0;
   }
-  .getstarted{
+  .getstarted {
     padding: 1rem;
   }
-  .getstarted__cards{
+  .getstarted__cards {
     padding: 0;
     flex-direction: column;
   }
-  .newsLetter{
+  .newsLetter {
     flex-direction: column;
     padding: 4rem 0;
   }
   .newsLetter__content > p,
-  .newsLetter__content > h2{
+  .newsLetter__content > h2 {
     margin-left: 15px;
     margin-right: auto;
   }
-  .newsLetter__input{
+  .newsLetter__input {
     margin-top: 35px;
     display: flex;
     justify-content: center;
     width: 100%;
   }
-  .newsLetter__input > input{
+  .newsLetter__input > input {
     width: 40%;
     margin-left: unset;
   }
   .getstarted__arrow,
   .getstarted__arrow_2,
-  .getstarted__arrow_3{
+  .getstarted__arrow_3 {
     display: none;
   }
-  .getstarted__cards__card{
+  .getstarted__cards__card {
     padding: 1rem;
     margin: 1rem 0;
   }

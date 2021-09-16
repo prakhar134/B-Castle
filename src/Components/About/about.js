@@ -15,17 +15,12 @@ const About = (props) => {
         />
       </div>
       <div className="about__content">
-        <h1 className="about__content__heaing">What is Bitcoin</h1>
-        <p className="about__content__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laborisLorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris
+        <h1 className="about__content__heaing">About Us</h1>
+        <p style={{ lineHeight: 1.5 }} className="about__content__description">
+          MoneyCastle is a young and growing digital currency portfolio
+          management company. We provide digital currency management services,
+          market insights, investment exposure, and investment products to the
+          developing digital currency asset class.
         </p>
         <div
           onClick={() => props.setLoginModal(true)}
