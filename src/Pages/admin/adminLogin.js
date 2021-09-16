@@ -15,7 +15,7 @@ const AdminLogin = () => {
 
   const log = async (e) => {
     e.preventDefault();
-    const data = await dispatch(Signin(Login));
+    const data = await dispatch(Signin(Login, () => {}));
     if (data?.isAdmin) {
       window.location.href = "/adminPanel";
     } else {
@@ -30,7 +30,13 @@ const AdminLogin = () => {
         <p>Admin Login</p>
       </div>
       <div className="logo">
-        <img src={logo} alt="LOGO" />
+        <img
+          src={logo}
+          height="50px"
+          width="50px"
+          alt="LOGO"
+          style={{ marginTop: 5, marginBottom: 5 }}
+        />
       </div>
       <form className="modal__form">
         <input

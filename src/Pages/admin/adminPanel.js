@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import AddNews from "../../Components/addNews/AddNews";
+import withAuth from "../../authentication";
 
 const AdminPanel = () => {
   const dispatch = useDispatch();
@@ -99,4 +100,4 @@ const AdminPanel = () => {
   );
 };
 
-export default AdminPanel;
+export default withAuth(AdminPanel);

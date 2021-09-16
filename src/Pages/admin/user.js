@@ -7,6 +7,7 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import AddBalance from "../../Components/addBalance/addBalance";
 import AddTrade from "../../Components/addTrade/AddTrade";
+import withAuth from "../../authentication";
 
 const User = () => {
   const dispatch = useDispatch();
@@ -179,4 +180,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default withAuth(User);
