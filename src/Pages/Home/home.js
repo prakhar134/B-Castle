@@ -36,6 +36,7 @@ const Home = () => {
       <About setLoginModal={setLoginModal} />
       <Features />
       <div
+        id="plans"
         style={{
           marginTop: "50px",
           display: "flex",

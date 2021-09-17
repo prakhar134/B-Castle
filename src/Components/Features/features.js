@@ -6,7 +6,7 @@ import { GiTimeBomb, GiHumanTarget } from "react-icons/gi";
 
 const Features = () => {
   return (
-    <div className="features" id="features">
+    <div className="features" id="services">
       <div className="features__heading">
         <h1>Our Services</h1>
         <p>Bitcoin is the simplest way to exchange money at very low cost.</p>

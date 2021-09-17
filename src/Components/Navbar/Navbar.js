@@ -276,11 +276,11 @@ const Navbar = (props) => {
           <a href="#about" className="link__style">
             <li className="nav__bar__option">About</li>
           </a>
-          <a href="#features" className="link__style">
-            <li className="nav__bar__option">Features</li>
+          <a href="#services" className="link__style">
+            <li className="nav__bar__option">Services</li>
           </a>
-          <a href="#contact" className="link__style">
-            <li className="nav__bar__option">Contact</li>
+          <a href="#plans" className="link__style">
+            <li className="nav__bar__option">Plans</li>
           </a>
           <a href="#news" className="link__style">
             <li className="nav__bar__option">News</li>
