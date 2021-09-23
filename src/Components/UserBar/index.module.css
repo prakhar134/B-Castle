@@ -1,50 +1,69 @@
-.bar{
-    display: grid;
-    width: 80% !important;
-    padding: 15px 0;
-    grid-template-columns: repeat(4, 1fr);
-    border: 2px solid grey;
-    text-align: center;
-    background-color: #fff;
-    margin: 0 auto;
+.bar {
+  display: grid;
+  width: 80% !important;
+  padding: 15px 0;
+  grid-template-columns: repeat(4, 1fr);
+  border: 2px solid grey;
+  text-align: center;
+  background-color: #fff;
+  margin: 0 auto;
 }
-.bar > span{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.bar > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.isUser{
-    background-color: rgba(0, 250, 50, 0.2);
-    color: green;
-    padding: 5px 15px;
-    text-align: center;
-    margin: auto;
-    max-width: 50px;
-    border-radius: 30px;
+.bar2 > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.isAdmin{
-    background-color: rgba(250, 50, 0, 0.2);
-    color: red;
-    padding: 5px 15px;
-    text-align: center;
-    border-radius: 30px;
-    max-width: 50px;
-    margin: auto;
+.isUser {
+  background-color: rgba(0, 250, 50, 0.2);
+  color: green;
+  padding: 5px 15px;
+  text-align: center;
+  margin: auto;
+  max-width: 50px;
+  border-radius: 30px;
 }
-.balance{
-    font-size: 2em;
-    font-weight: 600;
-    text-align: center;
+.isAdmin {
+  background-color: rgba(250, 50, 0, 0.2);
+  color: red;
+  padding: 5px 15px;
+  text-align: center;
+  border-radius: 30px;
+  max-width: 50px;
+  margin: auto;
 }
-.pointy{
-    cursor: pointer;
+.balance {
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
 }
-.textRed{
-    color: red;
+.pointy {
+  cursor: pointer;
+}
+.textRed {
+  color: red;
+}
+.bar2 {
+  display: grid;
+  width: 80% !important;
+  padding: 15px 0;
+  grid-template-columns: repeat(6, 1fr);
+  border: 2px solid grey;
+  text-align: center;
+  background-color: #fff;
+  margin: 0 auto;
 }
 @media (max-width: 800px) {
-    .bar{
-        width: 100%;
-        border: none;
-    }
+  .bar {
+    width: 100%;
+    border: none;
+  }
+  .bar2 {
+    width: 100%;
+    border: none;
+  }
 }

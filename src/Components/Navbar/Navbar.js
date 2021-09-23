@@ -249,7 +249,11 @@ const Navbar = (props) => {
       </React.Fragment>
 
       <div
-        style={{ margin: "auto", textAlign: "center", marginTop: "2rem" }}
+        style={{
+          margin: "auto",
+          textAlign: "center",
+          marginTop: "2rem",
+        }}
         className="signUpBtn2"
       >
         {authenticated ? (
@@ -264,25 +268,27 @@ const Navbar = (props) => {
         )}
       </div>
 
-      <div className="nav__bar">
-        <img
-          height="50px"
-          width="50px"
-          alt="LOGO"
-          className="logo"
-          src={logo}
-        />
+      <div style={props.style} className="nav__bar">
+        <a href="/">
+          <img
+            height="50px"
+            width="50px"
+            alt="LOGO"
+            className="logo"
+            src={logo}
+          />
+        </a>
         <ul className="nav__bar__options">
-          <a href="#about" className="link__style">
+          <a href="/#about" className="link__style">
             <li className="nav__bar__option">About</li>
           </a>
-          <a href="#services" className="link__style">
+          <a href="/#services" className="link__style">
             <li className="nav__bar__option">Services</li>
           </a>
-          <a href="#plans" className="link__style">
+          <a href="/#plans" className="link__style">
             <li className="nav__bar__option">Plans</li>
           </a>
-          <a href="#news" className="link__style">
+          <a href="/#news" className="link__style">
             <li className="nav__bar__option">News</li>
           </a>
           {authenticated ? (

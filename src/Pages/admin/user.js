@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import LoginHead from "../../Components/LoginHead/loginHead";
 import Sidebar from "../../Components/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
-import { getPrice, getUser } from "../../actions/admin";
+import { deleterade, getPrice, getUser } from "../../actions/admin";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import AddBalance from "../../Components/addBalance/addBalance";
@@ -32,6 +32,10 @@ const User = () => {
   };
   const onClose2 = () => {
     setModal2(false);
+  };
+
+  const del = (id) => {
+    dispatch(deleterade(id));
   };
 
   if (!user) return <div className="main_display">Loading...</div>;
@@ -65,7 +69,7 @@ const User = () => {
           }}
           className="user_balance"
         >
-          ₹{user?.balance}
+          ₹{user?.balance?.toFixed(2)}
         </p>
         <div style={{ marginBottom: "35px" }} className="flex">
           <span
@@ -113,62 +117,77 @@ const User = () => {
               <th>Current Price</th>
               <th></th>
               <th>Trade Date</th>
+              <th>Del</th>
             </tr>
             {user &&
               user?.trades &&
-              user?.trades.reverse()?.map((trade) => (
-                <tr>
-                  <td style={{ fontSize: "1.1em", fontWeight: "600" }}>
-                    {trade.name}
-                  </td>
-                  <td>{trade.price}</td>
-                  <td>{trade.quantity}</td>
-                  <td style={{ minWidth: "100px" }}>
-                    {price.symbol !== trade.name ? (
+              user?.trades
+                .sort(function (a, b) {
+                  const max = a.dateOfTrade.toString().split("-").join("");
+                  const min = b.dateOfTrade.toString().split("-").join("");
+                  return min - max;
+                })
+                ?.map((trade) => (
+                  <tr>
+                    <td style={{ fontSize: "1.1em", fontWeight: "600" }}>
+                      {trade.name}
+                    </td>
+                    <td>{trade.price}</td>
+                    <td>{trade.quantity}</td>
+                    <td style={{ minWidth: "100px" }}>
+                      {price.symbol !== trade.name ? (
+                        <span
+                          onClick={() => onClick(trade.name)}
+                          style={{
+                            backgroundColor: "whitesmoke",
+                            border: "2px solid grey",
+                            padding: "5px 10px",
+                            borderRadius: "5px",
+                            boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+                            cursor: "pointer",
+                            fontSize: "0.9em",
+                          }}
+                        >
+                          Get Price
+                        </span>
+                      ) : (
+                        <span style={{ fontWeight: 700 }}>{price.price}</span>
+                      )}
+                    </td>
+                    <td style={{ minWidth: "100px" }}>
                       <span
-                        onClick={() => onClick(trade.name)}
-                        style={{
-                          backgroundColor: "whitesmoke",
-                          border: "2px solid grey",
-                          padding: "5px 10px",
-                          borderRadius: "5px",
-                          boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
-                          cursor: "pointer",
-                          fontSize: "0.9em",
-                        }}
+                        style={
+                          trade.type === "buy"
+                            ? {
+                                padding: "5px 20px",
+                                borderRadius: "15px",
+                                backgroundColor: "rgba(0, 250, 50, 0.2)",
+                                color: "green",
+                              }
+                            : {
+                                padding: "1px 20px",
+                                borderRadius: "15px",
+                                backgroundColor: "rgba(250, 50, 0, 0.2)",
+                                color: "red",
+                              }
+                        }
                       >
-                        Get Price
+                        {trade.type}
                       </span>
-                    ) : (
-                      <span style={{ fontWeight: 700 }}>{price.price}</span>
-                    )}
-                  </td>
-                  <td style={{ minWidth: "100px" }}>
-                    <span
-                      style={
-                        trade.type === "buy"
-                          ? {
-                              padding: "5px 20px",
-                              borderRadius: "15px",
-                              backgroundColor: "rgba(0, 250, 50, 0.2)",
-                              color: "green",
-                            }
-                          : {
-                              padding: "1px 20px",
-                              borderRadius: "15px",
-                              backgroundColor: "rgba(250, 50, 0, 0.2)",
-                              color: "red",
-                            }
-                      }
-                    >
-                      {trade.type}
-                    </span>
-                  </td>
-                  <td style={{ minWidth: "100px" }}>
-                    {trade.dateOfTrade || "00/00/00"}
-                  </td>
-                </tr>
-              ))}
+                    </td>
+                    <td style={{ minWidth: "100px" }}>
+                      {trade.dateOfTrade || "00/00/00"}
+                    </td>
+                    <td>
+                      <span
+                        onClick={() => del(trade._id)}
+                        style={{ color: "red", cursor: "pointer" }}
+                      >
+                        Del
+                      </span>
+                    </td>
+                  </tr>
+                ))}
           </table>
           {(!user?.trades || user?.trades.length === 0) && (
             <p className="noTrades">No Trade Found</p>

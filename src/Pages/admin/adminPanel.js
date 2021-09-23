@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import LoginHead from "../../Components/LoginHead/loginHead";
 import Sidebar from "../../Components/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllUsers } from "../../actions/admin";
+import { getAllUsers, getRequest } from "../../actions/admin";
 import UserBar from "../../Components/UserBar/UserBar";
 import "./admin.css";
 import News from "../../Components/News/News";
@@ -11,14 +11,16 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import AddNews from "../../Components/addNews/AddNews";
 import withAuth from "../../authentication";
+import UserBar2 from "../../Components/UserBar/userBar2";
 
 const AdminPanel = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllUsers());
+    dispatch(getRequest());
     // eslint-disable-next-line
   }, []);
-  var { users } = useSelector((state) => state.Admin);
+  var { users, requests } = useSelector((state) => state.Admin);
   const [value, setValue] = useState("");
   const [usersF, setUsersF] = useState([]);
   const [newsModal, setNewsModal] = useState(false);
@@ -74,6 +76,21 @@ const AdminPanel = () => {
                   admin={user?.isAdmin}
                 />
               ))}
+        </div>
+        <h1 style={{ marginBottom: "20px" }}>Pending balance requests</h1>
+        <div
+          style={{ width: "100%", overflowX: "scroll", marginBottom: "50px" }}
+          className="table"
+        >
+          {requests.map((request) => (
+            <UserBar2
+              id={request._id}
+              name={request.name}
+              email={request.email}
+              phone={request.phone}
+              balance={request.balance}
+            />
+          ))}
         </div>
         <News />
         <Link

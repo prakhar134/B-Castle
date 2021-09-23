@@ -31,7 +31,7 @@ const UserBar = ({ id, name, email, balance, admin }) => {
           parseInt(balance) < 200 && !admin && style.textRed,
         ].join(" ")}
       >
-        {!admin ? balance : "-"}
+        {!admin ? balance.toFixed(2) : "-"}
       </span>
     </div>
   );

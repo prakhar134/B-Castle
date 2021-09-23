@@ -11,14 +11,14 @@ import AdminLogin from "../Pages/admin/adminLogin";
 import AdminPanel from "../Pages/admin/adminPanel";
 import User from "../Pages/admin/user";
 import ResetPassword from "../Pages/ResetPassword";
-import GoogleForm from "../Pages/googleForm";
+import RequestForm from "../Components/requestForm.js/RequestForm";
 
 const Routes = () => {
   return (
     <React.Fragment>
       <Switch history={history}>
         <Route exact path="/" component={home} />
-        <Route exact path="/plans" component={GoogleForm} />
+        <Route exact path="/plans" component={RequestForm} />
         <Route path="/about" component={about} />
         <Route path="/dashboard" component={Dash} />
         <Route path="/news" component={news} />
